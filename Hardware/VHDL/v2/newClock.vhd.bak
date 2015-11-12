@@ -1,0 +1,48 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.math_real.all;
+
+entity newClock is
+  port (
+    clock_fpga: in std_logic;                         -- clock
+	 newClock  : out std_logic
+  );
+end newClock;
+
+architecture newClock_behav of newClock is
+
+constant MAX9600 : natural := 5208; -- 50,000,000 / 153600
+signal count : natural range 0 to MAX9600 - 1 := 0;
+ 
+begin
+	process (sys_clk)
+	begin
+	if rising_edge(sys_clk) then
+		 newClock <= '0';
+		 if count = (MAX9600 - 1) then
+			count <= 0;
+		elsif ((count >= MAX9600 / 2) and (count <= MAX9600 - 2)) then 
+			newClock <= '1';
+			count <=  count + 1;
+		 else
+			count <=  count + 1;
+		 end if;
+	  end if;
+	end process;
+ 
+ 
+-- baudrategen : process (clk)
+-- begin
+--	if (rising_edge(clk)) then
+--		count <= (count + 1) mod MAX9600;
+--	 
+--		if (count = 0) then
+--			 newClock <= '1';
+--		else 
+--			 newClock <= '0';
+--		end if;
+--	end if;
+-- end process baudrategen;
+
+end newClock_behav;

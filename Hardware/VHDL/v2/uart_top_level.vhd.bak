@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.math_real.all;
+
+entity uart is
+  port (
+    clock_fpga : in std_logic;                         -- clock
+	 choice     : in std_logic_vector(2 downto 0);
+	 newClock  : out std_logic
+  );
+end uart;
+
+architecture uart_behav of uart is
+-- Clock 1
+constant MAX9600 : natural := 5208; -- 50,000,000 / 153600
+signal count : natural range 0 to MAX9600 - 1 := 0;
+ 
+begin
+	process (clock_fpga)
+	begin
+		if rising_edge(clock_fpga) then
+			if count = (MAX9600 - 1) then
+				count <= 0;
+			elsif ((count >= MAX9600 / 2) and (count <= MAX9600 - 2)) then 
+				newClock <= '1';
+			else
+				newClock <= '0';
+			end if;
+			
+			count <=  count + 1;
+		end if;
+	end process;
+ 
+ 
+-- baudrategen : process (clk)
+-- begin
+--	if (rising_edge(clk)) then
+--		count <= (count + 1) mod MAX9600;
+--	 
+--		if (count = 0) then
+--			 newClock <= '1';
+--		else 
+--			 newClock <= '0';
+--		end if;
+--	end if;
+-- end process baudrategen;
+
+end newClock_behav;

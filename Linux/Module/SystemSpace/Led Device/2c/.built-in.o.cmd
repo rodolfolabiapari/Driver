@@ -1,0 +1,1 @@
+cmd_/media/psf/Home/Documents/LinuxVirutal/LDD/Driver/Led/2c/built-in.o :=  rm -f /media/psf/Home/Documents/LinuxVirutal/LDD/Driver/Led/2c/built-in.o; ar rcsD /media/psf/Home/Documents/LinuxVirutal/LDD/Driver/Led/2c/built-in.o

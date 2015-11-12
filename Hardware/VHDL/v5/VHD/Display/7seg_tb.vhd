@@ -1,0 +1,60 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_arith.all;
+
+ENTITY decodificador7seg_tb IS
+END decodificador7seg_tb;
+
+ARCHITECTURE sinais OF decodificador7seg_tb IS
+	signal sig_clock           : std_logic;
+	signal sig_reset           : std_logic;
+	signal sig_dadoEntrada     : std_logic_vector(31 downto 0);
+	signal sig_displays        : std_logic_vector(55 downto 0);
+	signal sig_countOut        : std_logic_vector(3 downto 0);
+
+	-- Importação de componente
+	COMPONENT decodificador7seg port (
+		 -- Sinais de entrada
+		clock               : in std_logic;
+		reset               : in std_logic;
+		dadoEntrada         : in STD_LOGIC_VECTOR(31 DOWNTO 0);
+		-- Sinais de saida
+		displays            : out std_logic_vector (55 downto 0);
+		countOut : out std_logic_vector(3 downto 0)
+	    );
+	 end COMPONENT;
+
+BEGIN
+
+	UUT_7seg: decodificador7seg port map (
+		clock               => sig_clock      ,
+		reset               => sig_reset      ,
+		dadoEntrada         => sig_dadoEntrada,
+		-- Sinais de saia   => sig_-- Sinais d,
+		displays            => sig_displays   ,
+		countOut            => sig_countOut
+
+	);
+
+
+	sig_dadoEntrada <= x"01234567";
+
+	processClk: Process 
+	BEGIN
+		sig_clock <= '0';
+		wait for 1 ns;
+		sig_clock <= '1';
+		wait for 1 ns;
+	END PROCESS;
+
+
+	-- Processo responsavel pela variação no dado de entrada
+	signal_dadoA: PROCESS
+	BEGIN
+		sig_reset <= '1';
+		wait for 10 ns;
+		sig_reset <= '0';
+		wait for 10000000 ns;
+	END PROCESS;
+
+END ARCHITECTURE sinais;

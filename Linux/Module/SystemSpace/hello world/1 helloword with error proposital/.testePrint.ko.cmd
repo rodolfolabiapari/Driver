@@ -1,0 +1,1 @@
+cmd_/home/rodolfo/1hello/testePrint.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-37-generic/scripts/module-common.lds --build-id  -o /home/rodolfo/1hello/testePrint.ko /home/rodolfo/1hello/testePrint.o /home/rodolfo/1hello/testePrint.mod.o

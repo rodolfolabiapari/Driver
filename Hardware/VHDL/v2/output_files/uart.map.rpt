@@ -1,0 +1,1365 @@
+Analysis & Synthesis report for uart
+Mon Sep 21 23:56:13 2015
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |uart_top_level|estado
+  9. State Machine - |uart_top_level|des:crito1|processKey:mapK|state
+ 10. State Machine - |uart_top_level|des:crito1|f:mapF|state
+ 11. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|state
+ 12. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state
+ 13. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state
+ 14. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state
+ 15. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state
+ 16. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state
+ 17. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state
+ 18. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state
+ 19. State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state
+ 20. User-Specified and Inferred Latches
+ 21. Registers Removed During Synthesis
+ 22. Removed Registers Triggering Further Register Optimizations
+ 23. General Register Statistics
+ 24. Inverted Register Statistics
+ 25. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 26. Port Connectivity Checks: "des:crito1"
+ 27. Port Connectivity Checks: "uart:uart1|newClock:c1"
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Sep 21 23:56:13 2015      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; uart                                       ;
+; Top-level Entity Name              ; uart_top_level                             ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; 358                                        ;
+;     Total combinational functions  ; 358                                        ;
+;     Dedicated logic registers      ; 58                                         ;
+; Total registers                    ; 58                                         ;
+; Total pins                         ; 34                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5T144C8        ;                    ;
+; Top-level entity name                                                      ; uart_top_level     ; uart               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                                                         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                             ; Library ;
++--------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/ip_finale.vhd ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/ip_finale.vhd ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/ip.vhd        ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/ip.vhd        ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/des.vhd       ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/3des/des/des.vhd       ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/p_box.vhd      ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/p_box.vhd      ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/f.vhd          ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/f.vhd          ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/e.vhd          ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/feistel/e.vhd          ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/processKey.vhd    ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/processKey.vhd    ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/pc2.vhd           ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/pc2.vhd           ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/pc1.vhd           ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/keys/pc1.vhd           ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox8.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox8.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox7.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox7.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox6.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox6.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox5.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox5.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox4.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox4.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox3.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox3.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox2.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox2.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox1.vhd         ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox1.vhd         ;         ;
+; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox.vhd          ; yes             ; User VHDL File  ; //VBOXSVR/rodolfolabiapari/Documents/Nuvem/MEGA/Pesquisas/EncryptionInHardware/Code/VHD/3DES VHDL/sbox/sbox.vhd          ;         ;
+; uart_top_level.vhd                                                                                                       ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/uart_top_level.vhd                                                                        ;         ;
+; rx.vhd                                                                                                                   ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/rx.vhd                                                                                    ;         ;
+; tx.vhd                                                                                                                   ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/tx.vhd                                                                                    ;         ;
+; newClock.vhd                                                                                                             ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/newClock.vhd                                                                              ;         ;
+; 7seg.vhd                                                                                                                 ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/7seg.vhd                                                                                  ;         ;
+; uart.vhd                                                                                                                 ; yes             ; User VHDL File  ; C:/altera/projetos/ldd/uart/v2/uart.vhd                                                                                  ;         ;
++--------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 358                ;
+;                                             ;                    ;
+; Total combinational functions               ; 358                ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 184                ;
+;     -- 3 input functions                    ; 137                ;
+;     -- <=2 input functions                  ; 37                 ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 341                ;
+;     -- arithmetic mode                      ; 17                 ;
+;                                             ;                    ;
+; Total registers                             ; 58                 ;
+;     -- Dedicated logic registers            ; 58                 ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 34                 ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+; Maximum fan-out node                        ; countBytesLidos[0] ;
+; Maximum fan-out                             ; 95                 ;
+; Total fan-out                               ; 1399               ;
+; Average fan-out                             ; 3.11               ;
++---------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; |uart_top_level            ; 358 (249)         ; 58 (4)       ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |uart_top_level                        ;              ;
+;    |decodificador7seg:d1|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_top_level|decodificador7seg:d1   ;              ;
+;    |uart:uart1|            ; 102 (15)          ; 54 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_top_level|uart:uart1             ;              ;
+;       |newClock:c1|        ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_top_level|uart:uart1|newClock:c1 ;              ;
+;       |rx:rx1|             ; 46 (46)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_top_level|uart:uart1|rx:rx1      ;              ;
+;       |tx:tx1|             ; 18 (18)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart_top_level|uart:uart1|tx:tx1      ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|estado                                                             ;
++---------------------+--------------------+---------------------+--------------------+--------------+
+; Name                ; estado.recebeTexto ; estado.retornaChave ; estado.recebeChave ; estado.reset ;
++---------------------+--------------------+---------------------+--------------------+--------------+
+; estado.reset        ; 0                  ; 0                   ; 0                  ; 0            ;
+; estado.recebeChave  ; 0                  ; 0                   ; 1                  ; 1            ;
+; estado.retornaChave ; 0                  ; 1                   ; 0                  ; 1            ;
+; estado.recebeTexto  ; 1                  ; 0                   ; 0                  ; 1            ;
++---------------------+--------------------+---------------------+--------------------+--------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|processKey:mapK|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++------------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------+
+; Name             ; state.pronto ; state.pc2_g ; state.pc2_f ; state.pc2_e ; state.pc2_d ; state.pc2_c ; state.pc2_b ; state.pc2_a ; state.pc2_9 ; state.pc2_8 ; state.pc2_7 ; state.pc2_6 ; state.pc2_5 ; state.pc2_4 ; state.pc2_3 ; state.pc2_2 ; state.pc2_1 ; state.rotacaog_1 ; state.rotacaof_2 ; state.rotacaoe_2 ; state.rotacaod_2 ; state.rotacaoc_2 ; state.rotacaob_2 ; state.rotacaoa_2 ; state.rotacao9_1 ; state.rotacao8_2 ; state.rotacao7_2 ; state.rotacao6_2 ; state.rotacao5_2 ; state.rotacao4_2 ; state.rotacao3_2 ; state.rotacao2_1 ; state.rotacao1_1 ; state.pc1 ;
++------------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------+
+; state.pc1        ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0         ;
+; state.rotacao1_1 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 1         ;
+; state.rotacao2_1 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 1         ;
+; state.rotacao3_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 1         ;
+; state.rotacao4_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacao5_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacao6_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacao7_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacao8_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacao9_1 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaoa_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaob_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaoc_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaod_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaoe_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaof_2 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.rotacaog_1 ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_1      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_2      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_3      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_4      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_5      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_6      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_7      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_8      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_9      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_a      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_b      ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_c      ; 0            ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_d      ; 0            ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_e      ; 0            ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_f      ; 0            ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pc2_g      ; 0            ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
+; state.pronto     ; 1            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1         ;
++------------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|state                       ;
++----------------+--------------+----------------+---------------+--------------+
+; Name           ; state.pronto ; state.op_p_box ; state.op_sbox ; state.op_xor ;
++----------------+--------------+----------------+---------------+--------------+
+; state.op_xor   ; 0            ; 0              ; 0             ; 0            ;
+; state.op_sbox  ; 0            ; 0              ; 1             ; 1            ;
+; state.op_p_box ; 0            ; 1              ; 0             ; 1            ;
+; state.pronto   ; 1            ; 0              ; 0             ; 1            ;
++----------------+--------------+----------------+---------------+--------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|state ;
++------------------+--------------+--------------+---------------------+
+; Name             ; state.pronto ; state.espera ; state.liberaSbox    ;
++------------------+--------------+--------------+---------------------+
+; state.liberaSbox ; 0            ; 0            ; 0                   ;
+; state.espera     ; 0            ; 1            ; 1                   ;
+; state.pronto     ; 1            ; 0            ; 1                   ;
++------------------+--------------+--------------+---------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------+
+; State Machine - |uart_top_level|des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state ;
++-------------------+--------------+-------------------+------------------------------+
+; Name              ; state.pronto ; state.consultaRam ; state.inicia                 ;
++-------------------+--------------+-------------------+------------------------------+
+; state.inicia      ; 0            ; 0                 ; 0                            ;
+; state.consultaRam ; 0            ; 1                 ; 1                            ;
+; state.pronto      ; 1            ; 0                 ; 1                            ;
++-------------------+--------------+-------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++------------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal         ; Free of Timing Hazards ;
++------------------------------------------------------+-----------------------------+------------------------+
+; ledred[0]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[1]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[2]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[3]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[4]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[5]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[6]$latch                                      ; estado.recebeChave          ; yes                    ;
+; ledred[7]$latch                                      ; estado.recebeChave          ; yes                    ;
+; sig_decod_In[0]                                      ; Selector92                  ; yes                    ;
+; sig_decod_In[1]                                      ; Selector92                  ; yes                    ;
+; sig_decod_In[2]                                      ; Selector92                  ; yes                    ;
+; sig_decod_In[3]                                      ; Selector92                  ; yes                    ;
+; display8seg[7]$latch                                 ; Selector97                  ; yes                    ;
+; display8segSelect[0]$latch                           ; display8segSelect           ; yes                    ;
+; uart:uart1|dado_recebido[0]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[1]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[2]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[3]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[4]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[5]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[6]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|dado_recebido[7]                          ; uart:uart1|comando_recebido ; yes                    ;
+; uart:uart1|tx_start                                  ; GND                         ; yes                    ;
+; countEstado[0]                                       ; Selector100                 ; yes                    ;
+; countBytesLidos[0]                                   ; Selector86                  ; yes                    ;
+; countBytesLidos[1]                                   ; Selector86                  ; yes                    ;
+; countBytesLidos[2]                                   ; Selector86                  ; yes                    ;
+; countBytesLidos[3]                                   ; Selector86                  ; yes                    ;
+; countBytesLidos[4]                                   ; Selector86                  ; yes                    ;
+; sig_comm_enviar                                      ; sig_comm_enviar             ; yes                    ;
+; countEstado[1]                                       ; Selector100                 ; yes                    ;
+; countEstado[2]                                       ; Selector100                 ; yes                    ;
+; countEstado[3]                                       ; Selector101                 ; yes                    ;
+; completado[0]                                        ; Selector83                  ; yes                    ;
+; uart:uart1|edge                                      ; uart:uart1|edge             ; yes                    ;
+; sig_dado_enviar[0]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[1]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[2]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[5]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[4]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[3]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[6]                                   ; Selector81                  ; yes                    ;
+; sig_dado_enviar[7]                                   ; Selector81                  ; yes                    ;
+; sig_des_key[23]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[15]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[7]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[31]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[47]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[55]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[39]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[63]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[22]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[14]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[6]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[30]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[46]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[54]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[38]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[62]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[21]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[13]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[5]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[29]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[45]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[53]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[37]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[61]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[18]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[10]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[2]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[26]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[42]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[50]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[34]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[58]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[19]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[11]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[3]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[27]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[43]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[51]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[35]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[59]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[20]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[12]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[4]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[28]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[44]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[52]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[36]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[60]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[17]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[9]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[1]                                       ; Selector2                   ; yes                    ;
+; sig_des_key[25]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[41]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[49]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[33]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[57]                                      ; Selector2                   ; yes                    ;
+; sig_des_key[16]                                      ; Selector2                   ; yes                    ;
+; Number of user-specified and inferred latches = 107  ;                             ;                        ;
++------------------------------------------------------+-----------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++-----------------------------------------------------------------+---------------------------------------------+
+; Register name                                                   ; Reason for Removal                          ;
++-----------------------------------------------------------------+---------------------------------------------+
+; des:crito1|sig_f_reset                                          ; Stuck at VCC due to stuck port preset       ;
+; des:crito1|sig_k_reset                                          ; Stuck at VCC due to stuck port aload        ;
+; des:crito1|state.op_reset_key                                   ; Stuck at VCC due to stuck port aload        ;
+; des:crito1|state.op_process_key                                 ; Stuck at VCC due to stuck port aload        ;
+; des:crito1|state.op_ip                                          ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_ip_final                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f0_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f0_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f0_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f1_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f1_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f1_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f2_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f2_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f2_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f3_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f3_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f3_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f4_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f4_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f4_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f5_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f5_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f5_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f6_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f6_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f6_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f7_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f7_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f7_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f8_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f8_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f8_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f9_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f9_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_f9_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fa_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fa_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fa_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fb_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fb_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fb_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fc_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fc_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fc_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fd_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fd_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fd_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fe_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fe_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_fe_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_ff_working                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_ff_done                                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.op_ff_clean                                    ; Stuck at GND due to stuck port clear        ;
+; des:crito1|state.pronto                                         ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|done                                          ; Lost fanout                                 ;
+; des:crito1|chavesJaCalculadas                                   ; Stuck at GND due to stuck port clock_enable ;
+; des:crito1|processKey:mapK|done                                 ; Lost fanout                                 ;
+; des:crito1|f:mapF|sig_reset_sbox                                ; Stuck at VCC due to stuck port preset       ;
+; des:crito1|f:mapF|sbox:mapSbox|done                             ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sig_reset                        ; Stuck at VCC due to stuck port preset       ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|done              ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|done              ; Stuck at GND due to stuck port clear        ;
+; uart:uart1|tx:tx1|datafll[0]                                    ; Stuck at GND due to stuck port data_in      ;
+; uart:uart1|tx:tx1|datafll[9]                                    ; Stuck at VCC due to stuck port data_in      ;
+; uart:uart1|rx:rx1|busy                                          ; Merged with uart:uart1|rx:rx1|rx_flg        ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state.consultaRam ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state.pronto      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state.inicia      ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|state.liberaSbox                 ; Lost fanout                                 ;
+; des:crito1|f:mapF|sbox:mapSbox|state.espera                     ; Lost fanout                                 ;
+; des:crito1|f:mapF|state.op_xor                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|state.op_sbox                                 ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|state.op_p_box                                ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|state.pronto                                  ; Stuck at GND due to stuck port clear        ;
+; des:crito1|f:mapF|sbox:mapSbox|state.pronto                     ; Stuck at GND due to stuck port clear        ;
+; des:crito1|processKey:mapK|state.pc1                            ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao1_1                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao2_1                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao3_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao4_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao5_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao6_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao7_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao8_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacao9_1                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaoa_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaob_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaoc_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaod_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaoe_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaof_2                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.rotacaog_1                     ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_1                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_2                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_3                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_4                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_5                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_6                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_7                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_8                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_9                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_a                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_b                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_c                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_d                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_e                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_f                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pc2_g                          ; Lost fanout                                 ;
+; des:crito1|processKey:mapK|state.pronto                         ; Lost fanout                                 ;
+; Total Number of Removed Registers = 137                         ;                                             ;
++-----------------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                 ;
++-----------------------------------------------------------------+--------------------------+--------------------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal       ; Registers Removed due to This Register                                         ;
++-----------------------------------------------------------------+--------------------------+--------------------------------------------------------------------------------+
+; des:crito1|state.op_reset_key                                   ; Stuck at VCC             ; des:crito1|state.op_process_key, des:crito1|state.op_ip,                       ;
+;                                                                 ; due to stuck port aload  ; des:crito1|state.op_ip_final, des:crito1|state.op_f0_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_f0_done, des:crito1|state.op_f0_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_f1_working, des:crito1|state.op_f1_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_f1_clean, des:crito1|state.op_f2_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_f2_done, des:crito1|state.op_f2_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_f3_working, des:crito1|state.op_f3_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_f3_clean, des:crito1|state.op_f4_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_f4_done, des:crito1|state.op_f4_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_f5_working, des:crito1|state.op_f5_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_f5_clean, des:crito1|state.op_f6_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_f6_done, des:crito1|state.op_f6_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_f7_working, des:crito1|state.op_f7_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_f7_clean, des:crito1|state.op_f8_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_f8_done, des:crito1|state.op_f8_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_f9_working, des:crito1|state.op_f9_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_f9_clean, des:crito1|state.op_fa_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_fa_done, des:crito1|state.op_fa_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_fb_working, des:crito1|state.op_fb_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_fb_clean, des:crito1|state.op_fc_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_fc_done, des:crito1|state.op_fc_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_fd_working, des:crito1|state.op_fd_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_fd_clean, des:crito1|state.op_fe_working,                  ;
+;                                                                 ;                          ; des:crito1|state.op_fe_done, des:crito1|state.op_fe_clean,                     ;
+;                                                                 ;                          ; des:crito1|state.op_ff_working, des:crito1|state.op_ff_done,                   ;
+;                                                                 ;                          ; des:crito1|state.op_ff_clean, des:crito1|state.pronto, des:crito1|f:mapF|done, ;
+;                                                                 ;                          ; des:crito1|processKey:mapK|done                                                ;
+; des:crito1|sig_f_reset                                          ; Stuck at VCC             ; des:crito1|f:mapF|sig_reset_sbox, des:crito1|f:mapF|sbox:mapSbox|sig_reset,    ;
+;                                                                 ; due to stuck port preset ; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|done,                            ;
+;                                                                 ;                          ; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|done                             ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state.inicia                     ;
+; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state.consultaRam ; Lost Fanouts             ; des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state.inicia                     ;
+; des:crito1|f:mapF|state.op_xor                                  ; Stuck at GND             ; des:crito1|f:mapF|state.op_sbox                                                ;
+;                                                                 ; due to stuck port clear  ;                                                                                ;
+; des:crito1|f:mapF|state.op_p_box                                ; Stuck at GND             ; des:crito1|f:mapF|state.pronto                                                 ;
+;                                                                 ; due to stuck port clear  ;                                                                                ;
++-----------------------------------------------------------------+--------------------------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; uart:uart1|tx:tx1|tx_line              ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart_top_level|uart:uart1|tx:tx1|tx_flg   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |uart_top_level|uart:uart1|tx:tx1|index[3] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |uart_top_level|uart:uart1|rx:rx1|index[3] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |uart_top_level|Selector95                 ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 48 LEs               ; 120 LEs                ; No         ; |uart_top_level|Mux0                       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |uart_top_level|Selector85                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |uart_top_level|Selector97                 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |uart_top_level|Selector13                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "des:crito1"                                                                              ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; reset     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; text64    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; done      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; textout64 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "uart:uart1|newClock:c1" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; choice ; Input ; Info     ; Stuck at GND           ;
++--------+-------+----------+------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Mon Sep 21 23:56:09 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/3des/des/ip_finale.vhd
+    Info (12022): Found design unit 1: initialPermutationFinale-initialPermutationFinale_behav
+    Info (12023): Found entity 1: initialPermutationFinale
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/3des/des/ip.vhd
+    Info (12022): Found design unit 1: initialPermutation-initialPermutation_behav
+    Info (12023): Found entity 1: initialPermutation
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/3des/des/des.vhd
+    Info (12022): Found design unit 1: des-des_behav
+    Info (12023): Found entity 1: des
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/feistel/p_box.vhd
+    Info (12022): Found design unit 1: p_box-p_box_behav
+    Info (12023): Found entity 1: p_box
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/feistel/f.vhd
+    Info (12022): Found design unit 1: f-f_behav
+    Info (12023): Found entity 1: f
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/feistel/e.vhd
+    Info (12022): Found design unit 1: expansion-expansion_behav
+    Info (12023): Found entity 1: expansion
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/keys/processkey.vhd
+    Info (12022): Found design unit 1: processKey-processKey_behav
+    Info (12023): Found entity 1: processKey
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/keys/pc2.vhd
+    Info (12022): Found design unit 1: permutedChoice2-permutedChoice2_behav
+    Info (12023): Found entity 1: permutedChoice2
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/keys/pc1.vhd
+    Info (12022): Found design unit 1: permutedChoice1-permutedChoice1_behav
+    Info (12023): Found entity 1: permutedChoice1
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox8.vhd
+    Info (12022): Found design unit 1: sbox8-sbox8_behav
+    Info (12023): Found entity 1: sbox8
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox7.vhd
+    Info (12022): Found design unit 1: sbox7-sbox7_behav
+    Info (12023): Found entity 1: sbox7
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox6.vhd
+    Info (12022): Found design unit 1: sbox6-sbox6_behav
+    Info (12023): Found entity 1: sbox6
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox5.vhd
+    Info (12022): Found design unit 1: sbox5-sbox5_behav
+    Info (12023): Found entity 1: sbox5
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox4.vhd
+    Info (12022): Found design unit 1: sbox4-sbox4_behav
+    Info (12023): Found entity 1: sbox4
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox3.vhd
+    Info (12022): Found design unit 1: sbox3-sbox3_behav
+    Info (12023): Found entity 1: sbox3
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox2.vhd
+    Info (12022): Found design unit 1: sbox2-sbox2_behav
+    Info (12023): Found entity 1: sbox2
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox1.vhd
+    Info (12022): Found design unit 1: sbox1-sbox1_behav
+    Info (12023): Found entity 1: sbox1
+Info (12021): Found 2 design units, including 1 entities, in source file //vboxsvr/rodolfolabiapari/documents/nuvem/mega/pesquisas/encryptioninhardware/code/vhd/3des vhdl/sbox/sbox.vhd
+    Info (12022): Found design unit 1: sbox-sbox_behav
+    Info (12023): Found entity 1: sbox
+Info (12021): Found 2 design units, including 1 entities, in source file uart_top_level.vhd
+    Info (12022): Found design unit 1: uart_top_level-uart_behav
+    Info (12023): Found entity 1: uart_top_level
+Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
+    Info (12022): Found design unit 1: rx-rx_behiv
+    Info (12023): Found entity 1: rx
+Info (12021): Found 2 design units, including 1 entities, in source file tx.vhd
+    Info (12022): Found design unit 1: tx-tx_behiv
+    Info (12023): Found entity 1: tx
+Info (12021): Found 2 design units, including 1 entities, in source file newclock.vhd
+    Info (12022): Found design unit 1: newClock-newClock_behav
+    Info (12023): Found entity 1: newClock
+Info (12021): Found 2 design units, including 1 entities, in source file 7seg.vhd
+    Info (12022): Found design unit 1: decodificador7seg-decodificador
+    Info (12023): Found entity 1: decodificador7seg
+Info (12021): Found 2 design units, including 1 entities, in source file uart.vhd
+    Info (12022): Found design unit 1: uart-uart_behav
+    Info (12023): Found entity 1: uart
+Info (12127): Elaborating entity "uart_top_level" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at uart_top_level.vhd(31): object "sig_des_done" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_top_level.vhd(32): object "sig_des_textOut64" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_top_level.vhd(49): object "botaoAvancaByte" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(169): signal "botao1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(174): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(175): signal "sig_dado_recebido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(189): signal "sig_comm_recebido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(190): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(191): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(194): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(195): signal "sig_dado_recebido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(198): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(204): signal "sig_comm_recebido" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(236): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(236): signal "sig_comm_enviar_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(240): signal "botao4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(242): signal "botao2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(246): signal "sig_comm_enviar" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(248): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(249): signal "sig_comm_enviar_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(252): signal "sig_comm_enviar_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(252): signal "sig_comm_enviar" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(255): signal "countEstado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(258): signal "countBytesLidos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(259): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(260): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(261): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(262): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(263): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(264): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(265): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(266): signal "sig_des_key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart_top_level.vhd(277): signal "countEstado" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "countEstado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "display8segSelect", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "display8seg", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_decod_In", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "countBytesLidos", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "completado", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_dado_enviar", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_des_reset", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_des_key", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_des_text64", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "ledred", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart_top_level.vhd(151): inferring latch(es) for signal or variable "sig_comm_enviar", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "sig_comm_enviar" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[5]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[6]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "ledred[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[63]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[62]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[61]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[60]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[59]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[58]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[57]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[56]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[55]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[54]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[53]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[52]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[51]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[50]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[49]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[48]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[47]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[46]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[45]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[44]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[43]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[42]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[41]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[40]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[39]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[38]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[37]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[36]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[35]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[34]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[33]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[32]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[31]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[30]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[29]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[28]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[27]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[26]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[25]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[24]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[23]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[22]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[21]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[20]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[19]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[18]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[17]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[16]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[15]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[14]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[13]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[12]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[11]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[10]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[9]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[8]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[6]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[5]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_text64[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[63]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[62]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[61]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[60]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[59]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[58]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[57]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[56]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[55]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[54]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[53]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[52]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[51]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[50]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[49]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[48]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[47]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[46]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[45]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[44]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[43]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[42]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[41]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[40]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[39]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[38]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[37]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[36]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[35]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[34]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[33]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[32]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[31]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[30]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[29]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[28]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[27]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[26]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[25]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[24]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[23]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[22]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[21]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[20]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[19]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[18]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[17]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[16]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[15]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[14]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[13]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[12]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[11]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[10]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[9]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[8]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[6]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[5]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_key[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_des_reset" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[5]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[6]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_dado_enviar[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "completado[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "completado[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "completado[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countBytesLidos[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countBytesLidos[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countBytesLidos[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countBytesLidos[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countBytesLidos[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_decod_In[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_decod_In[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_decod_In[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "sig_decod_In[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8seg[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[3]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[4]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[5]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[6]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "display8segSelect[7]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countEstado[0]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countEstado[1]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countEstado[2]" at uart_top_level.vhd(151)
+Info (10041): Inferred latch for "countEstado[3]" at uart_top_level.vhd(151)
+Info (12128): Elaborating entity "uart" for hierarchy "uart:uart1"
+Warning (10492): VHDL Process Statement warning at uart.vhd(90): signal "rx_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at uart.vhd(85): inferring latch(es) for signal or variable "dado_recebido", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart.vhd(85): inferring latch(es) for signal or variable "comando_recebido", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at uart.vhd(85): inferring latch(es) for signal or variable "edge", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at uart.vhd(106): signal "tx_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart.vhd(106): signal "tx_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart.vhd(110): signal "tx_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart.vhd(110): signal "tx_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart.vhd(114): signal "tx_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at uart.vhd(114): signal "tx_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at uart.vhd(104): inferring latch(es) for signal or variable "tx_start", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "tx_start" at uart.vhd(104)
+Info (10041): Inferred latch for "comando_recebido" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[0]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[1]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[2]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[3]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[4]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[5]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[6]" at uart.vhd(85)
+Info (10041): Inferred latch for "dado_recebido[7]" at uart.vhd(85)
+Info (10041): Inferred latch for "edge" at uart.vhd(88)
+Info (12128): Elaborating entity "newClock" for hierarchy "uart:uart1|newClock:c1"
+Info (12128): Elaborating entity "tx" for hierarchy "uart:uart1|tx:tx1"
+Warning (10492): VHDL Process Statement warning at tx.vhd(68): signal "start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "rx" for hierarchy "uart:uart1|rx:rx1"
+Info (12128): Elaborating entity "decodificador7seg" for hierarchy "decodificador7seg:d1"
+Info (12128): Elaborating entity "des" for hierarchy "des:crito1"
+Warning (10492): VHDL Process Statement warning at des.vhd(190): signal "chavesJaCalculadas" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10018): Can't recognize finite state machine "state" because it has a complex reset state
+Info (12128): Elaborating entity "initialPermutation" for hierarchy "des:crito1|initialPermutation:mapIp"
+Info (12128): Elaborating entity "initialPermutationFinale" for hierarchy "des:crito1|initialPermutationFinale:mapIpFinale"
+Info (12128): Elaborating entity "f" for hierarchy "des:crito1|f:mapF"
+Info (12128): Elaborating entity "expansion" for hierarchy "des:crito1|f:mapF|expansion:mapE"
+Info (12128): Elaborating entity "sbox" for hierarchy "des:crito1|f:mapF|sbox:mapSbox"
+Warning (10036): Verilog HDL or VHDL warning at sbox.vhd(135): object "sig_bus48" assigned a value but never read
+Info (12128): Elaborating entity "sbox1" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox1:mapSbox1"
+Info (12128): Elaborating entity "sbox2" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox2:mapSbox2"
+Info (12128): Elaborating entity "sbox3" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox3:mapSbox3"
+Info (12128): Elaborating entity "sbox4" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox4:mapSbox4"
+Info (12128): Elaborating entity "sbox5" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox5:mapSbox5"
+Info (12128): Elaborating entity "sbox6" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox6:mapSbox6"
+Info (12128): Elaborating entity "sbox7" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox7:mapSbox7"
+Info (12128): Elaborating entity "sbox8" for hierarchy "des:crito1|f:mapF|sbox:mapSbox|sbox8:mapSbox8"
+Info (12128): Elaborating entity "p_box" for hierarchy "des:crito1|f:mapF|p_box:mapP_box"
+Info (12128): Elaborating entity "processKey" for hierarchy "des:crito1|processKey:mapK"
+Warning (10036): Verilog HDL or VHDL warning at processKey.vhd(124): object "comparacao48" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at processKey.vhd(125): object "ccompare" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at processKey.vhd(125): object "dcompare" assigned a value but never read
+Info (12128): Elaborating entity "permutedChoice1" for hierarchy "des:crito1|processKey:mapK|permutedChoice1:mapPc1"
+Info (12128): Elaborating entity "permutedChoice2" for hierarchy "des:crito1|processKey:mapK|permutedChoice2:mapPc2_k0"
+Warning (13012): Latch sig_decod_In[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal countBytesLidos[0]
+Warning (13012): Latch sig_decod_In[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal countBytesLidos[1]
+Warning (13012): Latch sig_decod_In[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal countBytesLidos[2]
+Warning (13012): Latch sig_decod_In[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal countBytesLidos[3]
+Warning (13012): Latch display8seg[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal uart:uart1|enviar_busy
+Warning (13012): Latch countEstado[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sig_comm_enviar
+Warning (13012): Latch countBytesLidos[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch countBytesLidos[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch countBytesLidos[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch countBytesLidos[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch countBytesLidos[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_comm_enviar has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sig_comm_enviar
+Warning (13012): Latch countEstado[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch countEstado[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch completado[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch uart:uart1|edge has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal uart:uart1|rx:rx1|rx_flg
+Warning (13012): Latch sig_dado_enviar[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_dado_enviar[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.retornaChave
+Warning (13012): Latch sig_des_key[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[47] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[55] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[39] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[63] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[46] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[54] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[38] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[62] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[45] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[53] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[37] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[61] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[42] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[50] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[34] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[58] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[43] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[51] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[35] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[59] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[44] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[52] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[36] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[60] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[41] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[49] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[33] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[57] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[40] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[48] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[32] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Warning (13012): Latch sig_des_key[56] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estado.recebeChave
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pinSound" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[1]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[2]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[3]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[4]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[5]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[6]" is stuck at VCC
+    Warning (13410): Pin "display8segSelect[7]" is stuck at GND
+Info (17049): 62 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pinIn120"
+Info (21057): Implemented 400 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 27 output pins
+    Info (21061): Implemented 366 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 250 warnings
+    Info: Peak virtual memory: 504 megabytes
+    Info: Processing ended: Mon Sep 21 23:56:13 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

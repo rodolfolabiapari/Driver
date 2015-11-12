@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="pinIn59" source="Pin Planner" >
+		</pin>
+		<pin name="pinOut63" source="Pin Planner" >
+		</pin>
+		<pin name="pinOut64" source="Pin Planner" >
+		</pin>
+		<pin name="botao" source="Pin Planner" >
+		</pin>
+		<pin name="sig_e" source="Pin Planner" >
+		</pin>
+		<pin name="sig_f" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[7]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[6]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[5]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[4]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[3]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[2]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[1]" source="Pin Planner" >
+		</pin>
+		<pin name="ledr[0]" source="Pin Planner" >
+		</pin>
+		<pin name="som" source="Pin Planner" >
+		</pin>
+		<pin name="sw0" source="Pin Planner" >
+		</pin>
+		<pin name="pin3" source="Pin Planner" >
+		</pin>
+		<pin name="pin139bench" source="Pin Planner" >
+		</pin>
+		<pin name="pin141bench" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

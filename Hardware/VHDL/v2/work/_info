@@ -1,0 +1,174 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/altera/projetos/ldd/uart/v1
+Erx
+Z0 w1440048035
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/altera/projetos/ldd/uart/v2
+Z5 8C:/altera/projetos/ldd/uart/v2/rx.vhd
+Z6 FC:/altera/projetos/ldd/uart/v2/rx.vhd
+l0
+L5
+V`IZ[=8APSIN^MdfbL1ib23
+!s100 Ll9enzLRf@;Kj?UC]o93F3
+Z7 OV;C;10.3d;59
+32
+Z8 !s110 1440048039
+!i10b 1
+Z9 !s108 1440048039.788000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/projetos/ldd/uart/v2/rx.vhd|
+Z11 !s107 C:/altera/projetos/ldd/uart/v2/rx.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+Arx_behiv
+R1
+R2
+R3
+Z14 DEx4 work 2 rx 0 22 `IZ[=8APSIN^MdfbL1ib23
+l22
+L15
+V8jJMW2Ci0Y2<TSYz8`C240
+!s100 :9f4Yl8_7ee^S@>@I1?<C2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Erx_tb
+Z15 w1440046775
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+Z17 8C:/altera/projetos/ldd/uart/v2/rx_tb.vhd
+Z18 FC:/altera/projetos/ldd/uart/v2/rx_tb.vhd
+l0
+L5
+Va05`kV8HzccI<zTlNB0Hz0
+!s100 lX4a@UQOKYO:6R99nmoP50
+R7
+32
+Z19 !s110 1440046782
+!i10b 1
+Z20 !s108 1440046782.573000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/projetos/ldd/uart/v2/rx_tb.vhd|
+Z22 !s107 C:/altera/projetos/ldd/uart/v2/rx_tb.vhd|
+!i113 1
+R12
+R13
+Asinais
+R16
+R2
+R3
+DEx4 work 5 rx_tb 0 22 a05`kV8HzccI<zTlNB0Hz0
+l23
+L8
+V4<On;4<_4kd8E0>TAbj0C1
+!s100 WTJ6QR^K@kD@NFm?1HVml2
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Etx
+Z23 w1440042521
+R1
+R2
+R3
+R4
+Z24 8C:/altera/projetos/ldd/uart/v2/tx.vhd
+Z25 FC:/altera/projetos/ldd/uart/v2/tx.vhd
+l0
+L5
+Vb[KP_cIzAmhcCfRA1ega>2
+!s100 @YSBg^<C3mIO;gT4C0]YT2
+R7
+32
+Z26 !s110 1440046231
+!i10b 1
+Z27 !s108 1440046231.822000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/projetos/ldd/uart/v2/tx.vhd|
+Z29 !s107 C:/altera/projetos/ldd/uart/v2/tx.vhd|
+!i113 1
+R12
+R13
+Atx_behiv
+R1
+R2
+R3
+DEx4 work 2 tx 0 22 b[KP_cIzAmhcCfRA1ega>2
+l19
+L15
+V;3QN_M]GdVQGF344GK24R2
+!s100 `_>c_]`;ffaC;5;L>zCEH3
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Etx_tb
+Z30 w1440038762
+R16
+R2
+R3
+R4
+Z31 8C:/altera/projetos/ldd/uart/v2/tx_tb.vhd
+Z32 FC:/altera/projetos/ldd/uart/v2/tx_tb.vhd
+l0
+L5
+Vk_>D6eZel:cUS17ezmA<l3
+!s100 C2^>jGNT@9=;?3VJ26NLU0
+R7
+32
+R26
+!i10b 1
+Z33 !s108 1440046231.119000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/projetos/ldd/uart/v2/tx_tb.vhd|
+Z35 !s107 C:/altera/projetos/ldd/uart/v2/tx_tb.vhd|
+!i113 1
+R12
+R13
+Asinais
+R16
+R2
+R3
+DEx4 work 5 tx_tb 0 22 k_>D6eZel:cUS17ezmA<l3
+l25
+L8
+VelK?haRfo9J=]jD0NT5PO2
+!s100 R;WM[^bA:c7XL;]SC3kQH0
+R7
+32
+R26
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R12
+R13

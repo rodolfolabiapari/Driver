@@ -1,0 +1,1 @@
+cmd_/media/sf_Documentos/Nuvem/Copy/Tcc/LDD_FPGA/Git/Linux/Module/SystemSpace/usb/esqueleto/built-in.o :=  rm -f /media/sf_Documentos/Nuvem/Copy/Tcc/LDD_FPGA/Git/Linux/Module/SystemSpace/usb/esqueleto/built-in.o; ar rcsD /media/sf_Documentos/Nuvem/Copy/Tcc/LDD_FPGA/Git/Linux/Module/SystemSpace/usb/esqueleto/built-in.o

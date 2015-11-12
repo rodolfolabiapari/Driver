@@ -1,0 +1,80 @@
+#!/bin/sh
+
+# ----------------------------------OBSERVAÇÕES DE DESCRIÇÃO E USO------------------------------------#
+#
+# Código em shell que realiza a leitura de temperatura de um dispositivo usb
+#	 utilizando um device driver criado manualmente por Greg-kroah
+#
+# Para conseder privilégios na execução deste arquivo, executar os comandos
+#	 chmod +x nomeDoArquivo.sh
+#
+# ----------------------------------------------------------------------------------------------------#
+
+
+# Função responsável por encontrar o DEVICE acoplado ao sistema na árvore de diretórios USB
+find_device() {
+
+	TEMP_FILE=""
+	# Gera todos os possíveis tipos de DEVICE no sistema [???????????]
+	for file in /sys/bus/usb/devices/[0-9]-[0-9]; do
+
+		# Se arquivos que casem com a REGEX [0-9][0-9] para o dir /sys/bus/usb/devices/ for uma lista vazia, ele retornara '/sys/bus/usb/devices/[0-9]-[0-9] 
+		if [ $file = "/sys/bus/usb/devices/[0-9]-[0-9]" ]; then
+			# Caso não encontrado, termina a aplicação.
+			echo "No USB devices loaded"
+			exit
+		fi
+
+		# Recolhe informações sobre o fornecedor 'vendor' e do produto 'product'.
+		vendor=`cat $file/idVendor`
+		product=`cat $file/idProduct`
+
+		# Assim, verifica se o produto e o fornecedor são idênticos ao DEVICE requerido para a execução deste.
+			# Se forem iguais, então encontou-se o driver requerido para o uso.
+		if [ "$product" = "0002" -a "$vendor" == "08f7" ]; then
+			# recebe o identificador dele no caso é tudo que fica depois de '/sys/bus/usb/devices/'
+			id=`echo $file | sed -e 's,^.*/\([^/]*\)$,\1,'`;
+			TEMP_FILE=$file/$id:1.0/temp
+		fi
+
+	# Fim do laço de repetição no qual realiza outra iteração
+	done
+
+
+	# Verifica se o valor de TEMP_FILE encontrado é vazio.
+		# Se sim, exibe que não foi possível encontrar o DEVICE requerido.
+	#if [ "x$TEMP_FILE" = "x" ]; then
+	if [ -z "$TEMP_FILE" ]; then
+		echo "Can't find goTemp device"
+		exit
+	fi
+}
+# Fim da função find_device()
+
+
+# Faz a chamada da função que sonda a procura de um device em especial.
+find_device
+
+
+# Laço de repetição infinito.
+while `/bin\/true`
+do
+	TEMP=`cat $TEMP_FILE 2>/dev/null`
+	## $? sera o resultado do ultimo comando em fg, ou seja, o find_device. OBS.: -ne not equal
+	if [ $? -ne 0 ]; then
+		find_device
+		echo -n '.'
+	else
+		echo 
+		# Recebe tempo em Graus Celsius e Fahrenheit
+		TEMP_C=`echo "($TEMP * 0.0078125)" | bc -l`
+		TEMP_F=`echo "(($TEMP * 0.0078125) * (9/5)) + 32 " | bc -l`
+
+		# exibe a temperatura encontrada
+		echo "Temperature = $TEMP_F F                $TEMP_C C"
+	fi
+
+	# Realiza um espera de 1 segundo
+	sleep 1s
+done
+

@@ -1,0 +1,136 @@
+#!/bin/sh
+
+# ----------------------------------OBSERVAÇÕES DE DESCRIÇÃO E USO------------------------------------#
+#
+# Código em shell que realiza a leitura de temperatura de um dispositivo usb
+#	 utilizando um device driver criado manualmente por Greg-kroah
+#
+# Para conseder privilégios na execução deste arquivo, executar os comandos
+#	 sh nomeDoArquivo
+
+# OBSERVAÇÕES DA LINGUAGEM SHELL:
+# Tudo que existe entre [] é considerado um comando test. Procurar man test
+#
+# ----------------------------------------------------------------------------------------------------#
+
+echo "Processo de leitura Iniciado"
+echo
+
+# Função responsável por encontrar o DEVICE acoplado ao sistema na árvore de diretórios USB
+find_device() {
+	# Exibe para o usuário que está procurando pelo driver
+	echo
+	echo "Procurando Device..."
+	
+	# Limpa o buffer para não ter lixo na pesquisa
+	DIRETORIO_DEVICE_TEMPERATURA=""
+	
+	# Verifica todos os DEVICES no diretório encontrado realizando REGEX
+		# Adiciona-os numa lista chamada file e percorre esta utilizando a estrutura de repetição for
+	for lista_devices_no_sistema in /sys/bus/usb/devices/[0-9]-[0-9]; do
+
+		# Se arquivos que casem com a REGEX [0-9]-[0-9] para o dir /sys/bus/usb/devices/ for uma 
+			# LISTA VAZIA, ele retornará a string '/sys/bus/usb/devices/[0-9]-[0-9]' 
+		if [ $lista_devices_no_sistema = "/sys/bus/usb/devices/[0-9]-[0-9]" ]; then
+		
+			# Caso não encontrado, termina a aplicação.
+			echo "  |---Não existe nenhum dispositivo USB acoplado no sistema."
+			echo
+			echo
+			echo "Processo de leitura Finalizado!"	
+			echo
+			exit
+		fi
+
+		# Recolhe informações sobre o fornecedor 'vendor' e do produto 'product' do device encontrado.
+		vendor=`cat $lista_devices_no_sistema/idVendor`
+		product=`cat $lista_devices_no_sistema/idProduct`
+
+		# Assim, verifica se o produto e o fornecedor são idênticos ao DEVICE requerido para a execução deste.
+			# Se forem iguais, então encontou-se o driver requerido para o uso.
+				# idVendor           0x09fb Altera
+				# idProduct          0x6001 Blaster
+		if [ "$vendor" = "09fb" -a "$product" = "6001" ]; then
+			# recebe o identificador dele
+			echo "  |---Dispositivo Altera ENCONTRADO! :)"
+			id=`echo $lista_devices_no_sistema | sed -e 's,^.*/\([^/]*\)$,\1,'`;
+			echo "  |---ID do dispositivo encontrado: '$id'"
+			DIRETORIO_DEVICE_TEMPERATURA=$lista_devices_no_sistema/$id:1.0/temp
+		else
+		
+			#  idVendor           0x0a12 Cambridge Silicon Radio, Ltd
+			#  idProduct          0x0001 Bluetooth Dongle (HCI mode)
+			if [ "$vendor" = "0a12" -a "$product" = "0001" ]; then
+				# recebe o identificador dele
+				echo "  |---Dispositivo Bluetooth ENCONTRADO! :)"
+				id=`echo $lista_devices_no_sistema | sed -e 's,^.*/\([^/]*\)$,\1,'`;
+				echo "  |---ID do dispositivo encontrado: '$id'"
+				DIRETORIO_DEVICE_TEMPERATURA=$lista_devices_no_sistema/$id:1.0/temp
+			fi
+		fi
+		
+	# Fim do laço de repetição no qual realiza outra iteração
+	done
+
+
+	# Verifica se o valor de DIRETORIO_DEVICE_TEMPERATURA encontrado é vazio.
+		# Se sim, exibe que não foi possível encontrar o DEVICE requerido.
+	#if [ "x$DIRETORIO_DEVICE_TEMPERATURA" = "x" ]; then
+	if [ -z "$DIRETORIO_DEVICE_TEMPERATURA" ]; then
+		echo "  |---Dispositivos NÃO ENCONTRADO! :("
+		echo
+		echo
+		echo "Processo de leitura Finalizado!"
+		echo
+		exit
+	fi
+}
+# Fim da função find_device()
+
+
+COUNTER=0
+
+# Laço de repetição infinito.
+while `/bin\/true`
+do
+	
+	echo
+	
+	# Faz a chamada da função que sonda a procura de um device em especial.
+	find_device
+	
+	echo
+	echo "Leitura $COUNTER"
+	echo "  |---Exibindo o DIRETORIO_DEVICE_TEMPERATURA: '$DIRETORIO_DEVICE_TEMPERATURA'"
+	
+	echo -n "  |---Exibindo o TEMP: "
+	TEMP=`cat $DIRETORIO_DEVICE_TEMPERATURA 2> /dev/null`
+	echo "'$TEMP'"
+	
+	## $? sera o resultado do ultimo comando em fg, ou seja, o find_device. OBS.: -ne not equal
+		# O valor igualado é a temperatura.
+		# ------------------------------------------------------------------ ESTE IF NÃO É EXECUTADO. CONFERIR
+	if [ $? -ne 0 ]; then
+		find_devices
+		echo -n '  |---.'
+	else
+	
+		# Recebe temperatura e faz o cálculo em Graus Celsius e Fahrenheit
+		TEMP_C=`echo "($TEMP * 0.0078125)" | bc -l`
+		TEMP_F=`echo "(($TEMP * 0.0078125) * (9/5)) + 32 " | bc -l`
+
+		# exibe a temperatura encontrada
+		echo "  |---Temperature = $TEMP_F F                $TEMP_C C"
+	fi
+
+	# Realiza um espera de 1 segundo
+	sleep 1s
+	# Adiciona os contadores para
+	COUNTER=$((COUNTER + 1))
+done
+#Fim do Loop Infinito
+
+echo
+echo
+echo "Processo de leitura Finalizado!"
+echo

@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'estado.retornaChave'
+Slack : -10.500
+TNS   : -158.032
+
+Type  : Slow Model Setup 'estado.recebeChave'
+Slack : -9.938
+TNS   : -529.455
+
+Type  : Slow Model Setup 'uart:uart1|edge'
+Slack : -9.886
+TNS   : -554.604
+
+Type  : Slow Model Setup 'clock'
+Slack : -9.208
+TNS   : -75.430
+
+Type  : Slow Model Setup 'uart:uart1|newClock:c1|newClock'
+Slack : -3.686
+TNS   : -97.400
+
+Type  : Slow Model Hold 'estado.retornaChave'
+Slack : -4.993
+TNS   : -48.242
+
+Type  : Slow Model Hold 'estado.recebeChave'
+Slack : -3.786
+TNS   : -158.887
+
+Type  : Slow Model Hold 'uart:uart1|edge'
+Slack : -3.332
+TNS   : -128.802
+
+Type  : Slow Model Hold 'clock'
+Slack : -2.546
+TNS   : -6.235
+
+Type  : Slow Model Hold 'uart:uart1|newClock:c1|newClock'
+Slack : -0.050
+TNS   : -0.148
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.777
+TNS   : -29.973
+
+Type  : Slow Model Minimum Pulse Width 'uart:uart1|newClock:c1|newClock'
+Slack : -0.742
+TNS   : -57.876
+
+Type  : Slow Model Minimum Pulse Width 'estado.retornaChave'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'estado.recebeChave'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'uart:uart1|edge'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'estado.retornaChave'
+Slack : -3.105
+TNS   : -40.392
+
+Type  : Fast Model Setup 'uart:uart1|edge'
+Slack : -2.971
+TNS   : -143.651
+
+Type  : Fast Model Setup 'estado.recebeChave'
+Slack : -2.929
+TNS   : -135.596
+
+Type  : Fast Model Setup 'clock'
+Slack : -2.123
+TNS   : -12.181
+
+Type  : Fast Model Setup 'uart:uart1|newClock:c1|newClock'
+Slack : -0.829
+TNS   : -7.896
+
+Type  : Fast Model Hold 'estado.retornaChave'
+Slack : -1.730
+TNS   : -19.133
+
+Type  : Fast Model Hold 'estado.recebeChave'
+Slack : -1.429
+TNS   : -67.130
+
+Type  : Fast Model Hold 'clock'
+Slack : -1.391
+TNS   : -4.022
+
+Type  : Fast Model Hold 'uart:uart1|edge'
+Slack : -1.314
+TNS   : -59.605
+
+Type  : Fast Model Hold 'uart:uart1|newClock:c1|newClock'
+Slack : -0.339
+TNS   : -2.744
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.222
+TNS   : -20.222
+
+Type  : Fast Model Minimum Pulse Width 'uart:uart1|newClock:c1|newClock'
+Slack : -0.500
+TNS   : -39.000
+
+Type  : Fast Model Minimum Pulse Width 'estado.retornaChave'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'estado.recebeChave'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'uart:uart1|edge'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

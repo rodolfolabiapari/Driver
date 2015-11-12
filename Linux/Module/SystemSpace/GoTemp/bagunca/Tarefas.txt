@@ -1,0 +1,2 @@
+Utiilzar a fpga como estação de temperatura.
+Saber de como fazer a leitura da temperatura em C como está no shell
