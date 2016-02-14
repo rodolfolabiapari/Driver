@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 3DES_Project
-Sun Feb 14 14:49:01 2016
+Sun Feb 14 18:20:16 2016
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -83,7 +83,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 14 14:49:01 2016      ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 14 18:20:16 2016      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 3DES_Project                               ;
 ; Top-level Entity Name              ; TDES_Project                               ;
@@ -1334,7 +1334,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:25     ;
+; Top            ; 00:00:26     ;
 +----------------+--------------+
 
 
@@ -1344,7 +1344,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Sun Feb 14 14:48:27 2016
+    Info: Processing started: Sun Feb 14 18:19:42 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 3DES_Project -c 3DES_Project
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file tdes_project.vhd
@@ -1625,7 +1625,7 @@ Info (21057): Implemented 6688 device resources after synthesis - the final reso
     Info (21064): Implemented 64 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 556 megabytes
-    Info: Processing ended: Sun Feb 14 14:49:01 2016
+    Info: Processing ended: Sun Feb 14 18:20:16 2016
     Info: Elapsed time: 00:00:34
     Info: Total CPU time (on all processors): 00:00:31
 

@@ -1,5 +1,5 @@
 Fitter report for 3DES_Project
-Sun Feb 14 14:50:24 2016
+Sun Feb 14 18:21:46 2016
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -70,14 +70,14 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Feb 14 14:50:24 2016      ;
+; Fitter Status                      ; Successful - Sun Feb 14 18:21:46 2016      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 3DES_Project                               ;
 ; Top-level Entity Name              ; TDES_Project                               ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 5,920 / 114,480 ( 5 % )                    ;
+; Total logic elements               ; 5,953 / 114,480 ( 5 % )                    ;
 ;     Total combinational functions  ; 3,453 / 114,480 ( 3 % )                    ;
 ;     Dedicated logic registers      ; 4,812 / 114,480 ( 4 % )                    ;
 ; Total registers                    ; 4812                                       ;
@@ -280,16 +280,16 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Total logic elements                        ; 5,920 / 114,480 ( 5 % )    ;
-;     -- Combinational with no register       ; 1108                       ;
-;     -- Register only                        ; 2467                       ;
-;     -- Combinational with a register        ; 2345                       ;
+; Total logic elements                        ; 5,953 / 114,480 ( 5 % )    ;
+;     -- Combinational with no register       ; 1141                       ;
+;     -- Register only                        ; 2500                       ;
+;     -- Combinational with a register        ; 2312                       ;
 ;                                             ;                            ;
 ; Logic element usage by number of LUT inputs ;                            ;
 ;     -- 4 input functions                    ; 2147                       ;
 ;     -- 3 input functions                    ; 323                        ;
 ;     -- <=2 input functions                  ; 983                        ;
-;     -- Register only                        ; 2467                       ;
+;     -- Register only                        ; 2500                       ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
 ;     -- normal mode                          ; 3417                       ;
@@ -299,7 +299,7 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 ;     -- Dedicated logic registers            ; 4,812 / 114,480 ( 4 % )    ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )          ;
 ;                                             ;                            ;
-; Total LABs:  partially or completely used   ; 416 / 7,155 ( 6 % )        ;
+; Total LABs:  partially or completely used   ; 423 / 7,155 ( 6 % )        ;
 ; Virtual pins                                ; 0                          ;
 ; I/O pins                                    ; 72 / 529 ( 14 % )          ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )             ;
@@ -317,11 +317,11 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )              ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )              ;
 ; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%               ;
-; Peak interconnect usage (total/H/V)         ; 23% / 24% / 25%            ;
+; Peak interconnect usage (total/H/V)         ; 29% / 31% / 26%            ;
 ; Maximum fan-out                             ; 4787                       ;
 ; Highest non-global fan-out                  ; 193                        ;
-; Total fan-out                               ; 28360                      ;
-; Average fan-out                             ; 2.62                       ;
+; Total fan-out                               ; 28487                      ;
+; Average fan-out                             ; 2.61                       ;
 +---------------------------------------------+----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -334,16 +334,16 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 5920 / 114480 ( 5 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 1108                  ; 0                              ;
-;     -- Register only                        ; 2467                  ; 0                              ;
-;     -- Combinational with a register        ; 2345                  ; 0                              ;
+; Total logic elements                        ; 5953 / 114480 ( 5 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 1141                  ; 0                              ;
+;     -- Register only                        ; 2500                  ; 0                              ;
+;     -- Combinational with a register        ; 2312                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
 ;     -- 4 input functions                    ; 2147                  ; 0                              ;
 ;     -- 3 input functions                    ; 323                   ; 0                              ;
 ;     -- <=2 input functions                  ; 983                   ; 0                              ;
-;     -- Register only                        ; 2467                  ; 0                              ;
+;     -- Register only                        ; 2500                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
 ;     -- normal mode                          ; 3417                  ; 0                              ;
@@ -352,7 +352,7 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 ; Total registers                             ; 4812                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 4812 / 114480 ( 4 % ) ; 0 / 114480 ( 0 % )             ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 416 / 7155 ( 6 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 423 / 7155 ( 6 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 72                    ; 0                              ;
@@ -369,7 +369,7 @@ The pin-out file can be found in E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/outp
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 28355                 ; 5                              ;
+;     -- Total Connections                    ; 28482                 ; 5                              ;
 ;     -- Registered Connections               ; 12468                 ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -1316,34 +1316,34 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                 ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
-; |TDES_Project                             ; 5920 (982)  ; 4812 (500)                ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 72   ; 0            ; 1108 (478)   ; 2467 (3)          ; 2345 (514)       ; |TDES_Project                                                                       ;              ;
-;    |decodificador7seg:d1|                 ; 109 (109)   ; 100 (100)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 62 (62)           ; 38 (38)          ; |TDES_Project|decodificador7seg:d1                                                  ;              ;
-;    |ramTexto:mapram|                      ; 214 (214)   ; 213 (213)                 ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 71 (71)           ; 142 (142)        ; |TDES_Project|ramTexto:mapram                                                       ;              ;
+; |TDES_Project                             ; 5953 (983)  ; 4812 (500)                ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 72   ; 0            ; 1141 (481)   ; 2500 (3)          ; 2312 (511)       ; |TDES_Project                                                                       ;              ;
+;    |decodificador7seg:d1|                 ; 108 (108)   ; 100 (100)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 61 (61)           ; 39 (39)          ; |TDES_Project|decodificador7seg:d1                                                  ;              ;
+;    |ramTexto:mapram|                      ; 214 (214)   ; 213 (213)                 ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 73 (73)           ; 140 (140)        ; |TDES_Project|ramTexto:mapram                                                       ;              ;
 ;       |altsyncram:ram_rtl_0|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TDES_Project|ramTexto:mapram|altsyncram:ram_rtl_0                                  ;              ;
 ;          |altsyncram_qcm1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TDES_Project|ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated   ;              ;
-;    |t_des:crito1|                         ; 4303 (393)  ; 3807 (389)                ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 496 (4)      ; 2293 (192)        ; 1514 (196)       ; |TDES_Project|t_des:crito1                                                          ;              ;
-;       |des:mapDes|                        ; 3911 (1761) ; 3418 (1416)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 492 (344)    ; 2101 (653)        ; 1318 (1183)      ; |TDES_Project|t_des:crito1|des:mapDes                                               ;              ;
-;          |f:mapF|                         ; 404 (155)   ; 255 (150)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 148 (4)      ; 157 (96)          ; 99 (55)          ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF                                        ;              ;
-;             |sbox:mapSbox|                ; 249 (70)    ; 105 (69)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 144 (1)      ; 61 (61)           ; 44 (6)           ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox                           ;              ;
-;                |sbox1:mapSbox1|           ; 28 (28)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 8 (8)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox1:mapSbox1            ;              ;
-;                |sbox2:mapSbox2|           ; 23 (23)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 5 (5)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox2:mapSbox2            ;              ;
+;    |t_des:crito1|                         ; 4332 (394)  ; 3807 (389)                ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 523 (2)      ; 2322 (193)        ; 1487 (198)       ; |TDES_Project|t_des:crito1                                                          ;              ;
+;       |des:mapDes|                        ; 3940 (1786) ; 3418 (1416)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 521 (362)    ; 2129 (665)        ; 1290 (1165)      ; |TDES_Project|t_des:crito1|des:mapDes                                               ;              ;
+;          |f:mapF|                         ; 408 (156)   ; 255 (150)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 152 (5)      ; 161 (97)          ; 95 (54)          ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF                                        ;              ;
+;             |sbox:mapSbox|                ; 252 (71)    ; 105 (69)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 147 (2)      ; 64 (63)           ; 41 (5)           ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox                           ;              ;
+;                |sbox1:mapSbox1|           ; 28 (28)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 1 (1)             ; 7 (7)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox1:mapSbox1            ;              ;
+;                |sbox2:mapSbox2|           ; 23 (23)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox2:mapSbox2            ;              ;
 ;                |sbox3:mapSbox3|           ; 23 (23)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox3:mapSbox3            ;              ;
 ;                |sbox4:mapSbox4|           ; 17 (17)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox4:mapSbox4            ;              ;
 ;                |sbox5:mapSbox5|           ; 25 (25)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox5:mapSbox5            ;              ;
 ;                |sbox6:mapSbox6|           ; 23 (23)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox6:mapSbox6            ;              ;
-;                |sbox7:mapSbox7|           ; 21 (21)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 5 (5)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox7:mapSbox7            ;              ;
+;                |sbox7:mapSbox7|           ; 21 (21)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 4 (4)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox7:mapSbox7            ;              ;
 ;                |sbox8:mapSbox8|           ; 22 (22)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 5 (5)            ; |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox8:mapSbox8            ;              ;
-;          |processKey:mapK|                ; 1747 (1747) ; 1747 (1747)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1291 (1291)       ; 456 (456)        ; |TDES_Project|t_des:crito1|des:mapDes|processKey:mapK                               ;              ;
-;    |t_un_des:decrito1|                    ; 177 (17)    ; 119 (13)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 58 (4)       ; 33 (1)            ; 86 (11)          ; |TDES_Project|t_un_des:decrito1                                                     ;              ;
-;       |un_des:mapUN_Des|                  ; 161 (111)   ; 106 (56)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (54)      ; 32 (0)            ; 75 (57)          ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des                                    ;              ;
-;          |f:mapF|                         ; 15 (6)      ; 15 (6)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 14 (6)           ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF                             ;              ;
-;             |sbox:mapSbox|                ; 9 (5)       ; 9 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 8 (5)            ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox                ;              ;
+;          |processKey:mapK|                ; 1754 (1754) ; 1747 (1747)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 1303 (1303)       ; 444 (444)        ; |TDES_Project|t_des:crito1|des:mapDes|processKey:mapK                               ;              ;
+;    |t_un_des:decrito1|                    ; 180 (17)    ; 119 (13)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 61 (4)       ; 36 (2)            ; 83 (11)          ; |TDES_Project|t_un_des:decrito1                                                     ;              ;
+;       |un_des:mapUN_Des|                  ; 163 (112)   ; 106 (56)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 57 (56)      ; 34 (1)            ; 72 (55)          ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des                                    ;              ;
+;          |f:mapF|                         ; 16 (6)      ; 15 (6)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 2 (0)             ; 13 (6)           ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF                             ;              ;
+;             |sbox:mapSbox|                ; 10 (6)      ; 9 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 2 (1)             ; 7 (4)            ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox                ;              ;
 ;                |sbox1:mapSbox1|           ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 3 (3)            ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox1:mapSbox1 ;              ;
 ;          |processKey:mapK|                ; 35 (35)     ; 35 (35)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 31 (31)           ; 4 (4)            ; |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|processKey:mapK                    ;              ;
-;    |uart:uart1|                           ; 139 (32)    ; 73 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (8)       ; 5 (4)             ; 68 (15)          ; |TDES_Project|uart:uart1                                                            ;              ;
+;    |uart:uart1|                           ; 140 (32)    ; 73 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (8)       ; 5 (5)             ; 68 (16)          ; |TDES_Project|uart:uart1                                                            ;              ;
 ;       |newClock:c1|                       ; 23 (23)     ; 15 (15)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 15 (15)          ; |TDES_Project|uart:uart1|newClock:c1                                                ;              ;
-;       |rx:rx1|                            ; 48 (48)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 1 (1)             ; 25 (25)          ; |TDES_Project|uart:uart1|rx:rx1                                                     ;              ;
-;       |tx:tx1|                            ; 41 (41)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 13 (13)          ; |TDES_Project|uart:uart1|tx:tx1                                                     ;              ;
+;       |rx:rx1|                            ; 47 (47)     ; 26 (26)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 26 (26)          ; |TDES_Project|uart:uart1|rx:rx1                                                     ;              ;
+;       |tx:tx1|                            ; 41 (41)     ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 11 (11)          ; |TDES_Project|uart:uart1|tx:tx1                                                     ;              ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1421,9 +1421,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bus_displays_out[54] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; bus_displays_out[55] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clock                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; botao_2              ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; botao_2              ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; botao_3              ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; botao_0              ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; botao_0              ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; pin_1_in             ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +----------------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1436,12 +1436,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; botao_1                               ;                   ;         ;
 ; clock                                 ;                   ;         ;
 ; botao_2                               ;                   ;         ;
-;      - process_0~1                    ; 1                 ; 6       ;
+;      - process_0~1                    ; 0                 ; 6       ;
 ; botao_3                               ;                   ;         ;
 ;      - process_0~1                    ; 0                 ; 6       ;
 ; botao_0                               ;                   ;         ;
-;      - Selector2~0                    ; 1                 ; 6       ;
-;      - Selector1~2                    ; 1                 ; 6       ;
+;      - Selector2~0                    ; 0                 ; 6       ;
+;      - Selector1~2                    ; 0                 ; 6       ;
 ; pin_1_in                              ;                   ;         ;
 ;      - uart:uart1|rx:rx1|Selector13~1 ; 0                 ; 6       ;
 ;      - uart:uart1|rx:rx1|Selector4~0  ; 0                 ; 6       ;
@@ -1463,117 +1463,117 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                     ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Selector17~0                                                             ; LCCOMB_X79_Y33_N8  ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; WideOr17~0                                                               ; LCCOMB_X82_Y33_N20 ; 18      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; WideOr17~1                                                               ; LCCOMB_X82_Y33_N6  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; WideOr30~0                                                               ; LCCOMB_X83_Y33_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; bloco[54]~1                                                              ; LCCOMB_X82_Y33_N28 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Selector17~0                                                             ; LCCOMB_X69_Y29_N20 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; WideOr17~0                                                               ; LCCOMB_X74_Y25_N20 ; 18      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; WideOr17~1                                                               ; LCCOMB_X73_Y27_N28 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; WideOr30~0                                                               ; LCCOMB_X75_Y26_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; bloco[54]~1                                                              ; LCCOMB_X70_Y27_N14 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; clock                                                                    ; PIN_Y2             ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; clock                                                                    ; PIN_Y2             ; 4787    ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; contador[1]~7                                                            ; LCCOMB_X81_Y33_N24 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~0                                             ; LCCOMB_X86_Y32_N8  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~1                                             ; LCCOMB_X83_Y32_N20 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~2                                             ; LCCOMB_X83_Y32_N2  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~3                                             ; LCCOMB_X84_Y32_N8  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~4                                             ; LCCOMB_X84_Y32_N22 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~5                                             ; LCCOMB_X81_Y32_N20 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~6                                             ; LCCOMB_X81_Y32_N22 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; decodificador7seg:d1|Mux24~7                                             ; LCCOMB_X86_Y32_N30 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i[0]~37                                                                  ; LCCOMB_X80_Y34_N26 ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; i[0]~44                                                                  ; LCCOMB_X75_Y37_N6  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; led_reset~reg0                                                           ; FF_X82_Y32_N13     ; 102     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; process_0~1                                                              ; LCCOMB_X114_Y35_N8 ; 26      ; Async. clear               ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; s_dado_enviar[7]~5                                                       ; LCCOMB_X80_Y36_N12 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; s_ram_datain[22]~4                                                       ; LCCOMB_X73_Y34_N18 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; s_ram_escrita                                                            ; FF_X79_Y37_N21     ; 75      ; Sync. clear, Write enable  ; no     ; --                   ; --               ; --                        ;
-; s_tdecodificador_displays[11]~3                                          ; LCCOMB_X82_Y33_N14 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; s_tdecodificador_displays[15]~2                                          ; LCCOMB_X80_Y33_N10 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; s_tdes_reset                                                             ; FF_X70_Y38_N11     ; 14      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; s_tundes_reset                                                           ; FF_X72_Y40_N5      ; 14      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|Selector3~0                                                 ; LCCOMB_X70_Y38_N2  ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|Selector6~0                                                 ; LCCOMB_X70_Y38_N4  ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|Selector9~0                                                 ; LCCOMB_X70_Y38_N28 ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|WideOr0~0                                                   ; LCCOMB_X70_Y38_N30 ; 66      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|WideOr11~0                                                  ; LCCOMB_X70_Y38_N14 ; 121     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[24]~0                       ; LCCOMB_X57_Y36_N12 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|bus32Out[18]~0               ; LCCOMB_X59_Y36_N14 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox5:mapSbox5|busOut4[2]~10 ; LCCOMB_X59_Y36_N24 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sig_bus32[18]~0              ; LCCOMB_X59_Y36_N8  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sig_reset                    ; FF_X59_Y36_N13     ; 6       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_sbox[18]~0                        ; LCCOMB_X59_Y36_N30 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[29]~1                         ; LCCOMB_X59_Y36_N10 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sig_reset_sbox                            ; FF_X60_Y36_N11     ; 8       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|f:mapF|sig_result_sbox_buffer[18]~0              ; LCCOMB_X59_Y36_N16 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|l7[24]~0                                         ; LCCOMB_X60_Y37_N14 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|l9[24]~0                                         ; LCCOMB_X54_Y35_N28 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|lb[24]~0                                         ; LCCOMB_X56_Y38_N4  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|ld[24]~0                                         ; LCCOMB_X59_Y38_N20 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|lf[24]~0                                         ; LCCOMB_X62_Y38_N6  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd1[54]~1                        ; LCCOMB_X63_Y42_N18 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd2[54]~1                        ; LCCOMB_X62_Y42_N26 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd3[54]~1                        ; LCCOMB_X62_Y42_N4  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd4[54]~1                        ; LCCOMB_X62_Y42_N8  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd5[54]~1                        ; LCCOMB_X61_Y42_N16 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd6[54]~1                        ; LCCOMB_X61_Y42_N4  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd7[54]~1                        ; LCCOMB_X61_Y42_N8  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd8[54]~1                        ; LCCOMB_X61_Y42_N14 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cd9[54]~1                        ; LCCOMB_X60_Y42_N0  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cda[54]~1                        ; LCCOMB_X61_Y42_N20 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cdb[54]~1                        ; LCCOMB_X60_Y42_N18 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cdc[54]~1                        ; LCCOMB_X61_Y42_N0  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cdd[54]~1                        ; LCCOMB_X61_Y42_N22 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cde[54]~1                        ; LCCOMB_X62_Y42_N2  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cdf[54]~1                        ; LCCOMB_X62_Y42_N18 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|cdg[54]~0                        ; LCCOMB_X62_Y42_N24 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d0[27]~0                         ; LCCOMB_X63_Y42_N12 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d1[26]~0                         ; LCCOMB_X63_Y42_N28 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d2[26]~0                         ; LCCOMB_X63_Y42_N2  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d3[26]~0                         ; LCCOMB_X63_Y42_N30 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d4[26]~0                         ; LCCOMB_X62_Y42_N22 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d5[26]~0                         ; LCCOMB_X62_Y42_N6  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d6[26]~0                         ; LCCOMB_X61_Y42_N28 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d7[26]~0                         ; LCCOMB_X61_Y42_N24 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d8[26]~0                         ; LCCOMB_X60_Y42_N20 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|d9[26]~0                         ; LCCOMB_X61_Y42_N12 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|da[26]~0                         ; LCCOMB_X60_Y42_N4  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|db[26]~0                         ; LCCOMB_X60_Y42_N28 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|dc[26]~0                         ; LCCOMB_X60_Y42_N14 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|dd[26]~0                         ; LCCOMB_X61_Y42_N18 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|de[26]~0                         ; LCCOMB_X62_Y42_N28 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|df[26]~0                         ; LCCOMB_X63_Y42_N8  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|processKey:mapK|dg[26]~0                         ; LCCOMB_X63_Y42_N14 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r0[20]~0                                         ; LCCOMB_X62_Y38_N30 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r1[20]~1                                         ; LCCOMB_X61_Y34_N16 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r2[20]~1                                         ; LCCOMB_X60_Y34_N8  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r3[20]~1                                         ; LCCOMB_X60_Y35_N20 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r4[20]~1                                         ; LCCOMB_X56_Y33_N20 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r5[20]~1                                         ; LCCOMB_X53_Y33_N12 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r6[20]~1                                         ; LCCOMB_X57_Y36_N4  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|r8[24]~0                                         ; LCCOMB_X53_Y37_N12 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|ra[24]~0                                         ; LCCOMB_X54_Y35_N2  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|rc[24]~0                                         ; LCCOMB_X59_Y38_N22 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|re[24]~0                                         ; LCCOMB_X59_Y38_N18 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|rg[24]~0                                         ; LCCOMB_X59_Y38_N10 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|sig_f_key[29]~2                                  ; LCCOMB_X60_Y36_N14 ; 80      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|sig_f_reset                                      ; FF_X60_Y36_N27     ; 11      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|sig_ip_ipIn[28]~0                                ; LCCOMB_X65_Y36_N20 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|sig_ip_ipIn_Finale[24]~0                         ; LCCOMB_X66_Y38_N14 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|sig_k_reset                                      ; FF_X62_Y42_N1      ; 69      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|des:mapDes|textOut64[63]~1                                  ; LCCOMB_X66_Y38_N8  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|estado.des3Carrega                                          ; FF_X70_Y38_N15     ; 122     ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; t_des:crito1|sig_des_reset                                               ; FF_X61_Y38_N11     ; 78      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_un_des:decrito1|sig_undes_reset                                        ; FF_X59_Y50_N9      ; 57      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sig_reset         ; FF_X62_Y50_N3      ; 5       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sig_reset_sbox                 ; FF_X61_Y50_N15     ; 6       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_un_des:decrito1|un_des:mapUN_Des|sig_f_reset                           ; FF_X61_Y50_N23     ; 7       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; t_un_des:decrito1|un_des:mapUN_Des|sig_k_reset                           ; FF_X60_Y52_N13     ; 36      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; uart:uart1|estadoRX.estabilizandoInformacao                              ; FF_X72_Y39_N25     ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; uart:uart1|newClock:c1|LessThan0~4                                       ; LCCOMB_X55_Y53_N30 ; 14      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; uart:uart1|newClock:c1|newClock                                          ; FF_X56_Y53_N17     ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; uart:uart1|newClock:c1|newClock                                          ; FF_X56_Y53_N17     ; 31      ; Clock                      ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; uart:uart1|tx:tx1|busy~2                                                 ; LCCOMB_X80_Y38_N30 ; 12      ; Async. clear, Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; uart:uart1|tx:tx1|datafll[1]~0                                           ; LCCOMB_X79_Y38_N30 ; 8       ; Latch enable               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; uart:uart1|tx_data[7]~0                                                  ; LCCOMB_X81_Y38_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; contador[1]~7                                                            ; LCCOMB_X72_Y29_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~0                                             ; LCCOMB_X75_Y22_N12 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~1                                             ; LCCOMB_X76_Y21_N0  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~2                                             ; LCCOMB_X76_Y21_N14 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~3                                             ; LCCOMB_X76_Y21_N4  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~4                                             ; LCCOMB_X75_Y22_N26 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~5                                             ; LCCOMB_X74_Y21_N24 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~6                                             ; LCCOMB_X74_Y21_N30 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; decodificador7seg:d1|Mux24~7                                             ; LCCOMB_X73_Y21_N4  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i[0]~37                                                                  ; LCCOMB_X70_Y26_N8  ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; i[0]~44                                                                  ; LCCOMB_X70_Y26_N10 ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; led_reset~reg0                                                           ; FF_X75_Y21_N1      ; 102     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; process_0~1                                                              ; LCCOMB_X91_Y35_N24 ; 26      ; Async. clear               ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; s_dado_enviar[7]~5                                                       ; LCCOMB_X70_Y28_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; s_ram_datain[22]~4                                                       ; LCCOMB_X66_Y29_N26 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; s_ram_escrita                                                            ; FF_X65_Y26_N27     ; 75      ; Sync. clear, Write enable  ; no     ; --                   ; --               ; --                        ;
+; s_tdecodificador_displays[11]~3                                          ; LCCOMB_X72_Y27_N8  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; s_tdecodificador_displays[15]~2                                          ; LCCOMB_X73_Y25_N0  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; s_tdes_reset                                                             ; FF_X62_Y27_N7      ; 14      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; s_tundes_reset                                                           ; FF_X79_Y27_N15     ; 14      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|Selector3~0                                                 ; LCCOMB_X62_Y27_N20 ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|Selector6~0                                                 ; LCCOMB_X62_Y27_N0  ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|Selector9~0                                                 ; LCCOMB_X62_Y27_N18 ; 65      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|WideOr0~0                                                   ; LCCOMB_X63_Y31_N4  ; 66      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|WideOr11~0                                                  ; LCCOMB_X62_Y27_N8  ; 121     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[24]~0                       ; LCCOMB_X36_Y27_N12 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|bus32Out[18]~0               ; LCCOMB_X36_Y27_N26 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox5:mapSbox5|busOut4[2]~10 ; LCCOMB_X35_Y27_N30 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sig_bus32[18]~0              ; LCCOMB_X36_Y27_N4  ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sig_reset                    ; FF_X36_Y27_N1      ; 6       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_sbox[18]~0                        ; LCCOMB_X36_Y27_N14 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[29]~1                         ; LCCOMB_X36_Y27_N22 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sig_reset_sbox                            ; FF_X36_Y27_N7      ; 8       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|f:mapF|sig_result_sbox_buffer[18]~0              ; LCCOMB_X36_Y27_N28 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|l7[24]~0                                         ; LCCOMB_X43_Y27_N26 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|l9[24]~0                                         ; LCCOMB_X43_Y27_N22 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|lb[24]~0                                         ; LCCOMB_X41_Y29_N16 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|ld[24]~0                                         ; LCCOMB_X42_Y33_N16 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|lf[24]~0                                         ; LCCOMB_X40_Y27_N6  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd1[54]~1                        ; LCCOMB_X59_Y27_N6  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd2[54]~1                        ; LCCOMB_X50_Y27_N28 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd3[54]~1                        ; LCCOMB_X50_Y27_N22 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd4[54]~1                        ; LCCOMB_X50_Y27_N8  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd5[54]~1                        ; LCCOMB_X50_Y27_N4  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd6[54]~1                        ; LCCOMB_X50_Y27_N14 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd7[54]~1                        ; LCCOMB_X50_Y27_N30 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd8[54]~1                        ; LCCOMB_X50_Y27_N26 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cd9[54]~1                        ; LCCOMB_X50_Y27_N0  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cda[54]~1                        ; LCCOMB_X49_Y26_N14 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cdb[54]~1                        ; LCCOMB_X49_Y27_N14 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cdc[54]~1                        ; LCCOMB_X49_Y26_N26 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cdd[54]~1                        ; LCCOMB_X49_Y26_N24 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cde[54]~1                        ; LCCOMB_X46_Y26_N22 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cdf[54]~1                        ; LCCOMB_X46_Y26_N26 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|cdg[54]~0                        ; LCCOMB_X46_Y26_N6  ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d0[27]~0                         ; LCCOMB_X61_Y27_N14 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d1[26]~0                         ; LCCOMB_X61_Y27_N24 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d2[26]~0                         ; LCCOMB_X59_Y27_N22 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d3[26]~0                         ; LCCOMB_X50_Y27_N20 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d4[26]~0                         ; LCCOMB_X50_Y27_N10 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d5[26]~0                         ; LCCOMB_X50_Y27_N6  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d6[26]~0                         ; LCCOMB_X50_Y27_N18 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d7[26]~0                         ; LCCOMB_X50_Y27_N2  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d8[26]~0                         ; LCCOMB_X50_Y27_N16 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|d9[26]~0                         ; LCCOMB_X50_Y27_N12 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|da[26]~0                         ; LCCOMB_X49_Y26_N16 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|db[26]~0                         ; LCCOMB_X46_Y26_N18 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|dc[26]~0                         ; LCCOMB_X49_Y26_N30 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|dd[26]~0                         ; LCCOMB_X46_Y26_N12 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|de[26]~0                         ; LCCOMB_X46_Y26_N8  ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|df[26]~0                         ; LCCOMB_X46_Y26_N28 ; 56      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|processKey:mapK|dg[26]~0                         ; LCCOMB_X46_Y26_N30 ; 48      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r0[20]~0                                         ; LCCOMB_X56_Y28_N22 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r1[20]~1                                         ; LCCOMB_X54_Y31_N24 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r2[20]~1                                         ; LCCOMB_X41_Y27_N30 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r3[20]~1                                         ; LCCOMB_X41_Y28_N16 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r4[20]~1                                         ; LCCOMB_X43_Y27_N24 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r5[20]~1                                         ; LCCOMB_X42_Y28_N8  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r6[20]~1                                         ; LCCOMB_X42_Y31_N30 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|r8[24]~0                                         ; LCCOMB_X43_Y27_N12 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|ra[24]~0                                         ; LCCOMB_X41_Y27_N12 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|rc[24]~0                                         ; LCCOMB_X42_Y30_N22 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|re[24]~0                                         ; LCCOMB_X42_Y33_N26 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|rg[24]~0                                         ; LCCOMB_X41_Y29_N2  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|sig_f_key[29]~2                                  ; LCCOMB_X41_Y28_N30 ; 80      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|sig_f_reset                                      ; FF_X40_Y27_N21     ; 11      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|sig_ip_ipIn[28]~0                                ; LCCOMB_X57_Y29_N28 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|sig_ip_ipIn_Finale[24]~0                         ; LCCOMB_X57_Y33_N18 ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|sig_k_reset                                      ; FF_X50_Y27_N25     ; 69      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|des:mapDes|textOut64[63]~1                                  ; LCCOMB_X41_Y28_N2  ; 64      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|estado.des3Carrega                                          ; FF_X62_Y27_N25     ; 122     ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; t_des:crito1|sig_des_reset                                               ; FF_X42_Y28_N9      ; 78      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_un_des:decrito1|sig_undes_reset                                        ; FF_X81_Y28_N9      ; 57      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sig_reset         ; FF_X84_Y27_N15     ; 5       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sig_reset_sbox                 ; FF_X83_Y27_N17     ; 6       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_un_des:decrito1|un_des:mapUN_Des|sig_f_reset                           ; FF_X82_Y28_N27     ; 7       ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; t_un_des:decrito1|un_des:mapUN_Des|sig_k_reset                           ; FF_X82_Y26_N13     ; 36      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; uart:uart1|estadoRX.estabilizandoInformacao                              ; FF_X79_Y28_N1      ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; uart:uart1|newClock:c1|LessThan0~4                                       ; LCCOMB_X60_Y49_N30 ; 14      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; uart:uart1|newClock:c1|newClock                                          ; FF_X59_Y49_N17     ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; uart:uart1|newClock:c1|newClock                                          ; FF_X59_Y49_N17     ; 31      ; Clock                      ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; uart:uart1|tx:tx1|busy~2                                                 ; LCCOMB_X77_Y26_N6  ; 12      ; Async. clear, Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; uart:uart1|tx:tx1|datafll[1]~0                                           ; LCCOMB_X76_Y26_N26 ; 8       ; Latch enable               ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; uart:uart1|tx_data[7]~0                                                  ; LCCOMB_X77_Y26_N10 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1582,11 +1582,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                            ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clock                           ; PIN_Y2             ; 4787    ; 258                                  ; Global Clock         ; GCLK4            ; --                        ;
-; process_0~1                     ; LCCOMB_X114_Y35_N8 ; 26      ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-; uart:uart1|newClock:c1|newClock ; FF_X56_Y53_N17     ; 31      ; 1                                    ; Global Clock         ; GCLK10           ; --                        ;
-; uart:uart1|tx:tx1|busy~2        ; LCCOMB_X80_Y38_N30 ; 12      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
-; uart:uart1|tx:tx1|datafll[1]~0  ; LCCOMB_X79_Y38_N30 ; 8       ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; clock                           ; PIN_Y2             ; 4787    ; 376                                  ; Global Clock         ; GCLK4            ; --                        ;
+; process_0~1                     ; LCCOMB_X91_Y35_N24 ; 26      ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; uart:uart1|newClock:c1|newClock ; FF_X59_Y49_N17     ; 31      ; 1                                    ; Global Clock         ; GCLK13           ; --                        ;
+; uart:uart1|tx:tx1|busy~2        ; LCCOMB_X77_Y26_N6  ; 12      ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; uart:uart1|tx:tx1|datafll[1]~0  ; LCCOMB_X76_Y26_N26 ; 8       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
 +---------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1736,47 +1736,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[4]                              ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[0]                              ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[5]                              ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[12]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[15]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[13]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[14]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[8]                            ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[11]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[8]                            ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[10]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[9]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[4]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[7]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[6]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[5]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[0]                            ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[15]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[12]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[13]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[14]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[3]                            ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[0]                            ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[1]                            ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[2]                            ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[28]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[31]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[29]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[30]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[24]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[7]                            ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[4]                            ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[6]                            ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[5]                            ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[27]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[24]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[26]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[25]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[20]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[23]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[21]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[22]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[16]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[31]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[28]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[29]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[30]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[19]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[16]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[18]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[17]                           ; 16      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[16]                             ; 15      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[23]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[20]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[21]                           ; 16      ;
+; t_des:crito1|des:mapDes|f:mapF|busFeistelOut[22]                           ; 16      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[34]                             ; 15      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[16]                             ; 15      ;
 ; uart:uart1|dado_recebido[6]                                                ; 15      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[29]                             ; 14      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[12]                             ; 14      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[17]                             ; 14      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[30]                             ; 14      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[35]                             ; 14      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[10]                             ; 14      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[12]                             ; 14      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[17]                             ; 14      ;
 ; t_un_des:decrito1|un_des:mapUN_Des|processKey:mapK|done                    ; 14      ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_process_key                    ; 14      ;
 ; s_tundes_reset                                                             ; 14      ;
@@ -1785,11 +1785,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Mux34~3                                                                    ; 14      ;
 ; Mux208~0                                                                   ; 14      ;
 ; decodificador7seg:d1|count[2]                                              ; 14      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[6]                              ; 13      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[43]                             ; 13      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[46]                             ; 13      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[38]                             ; 13      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[3]                              ; 13      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[6]                              ; 13      ;
 ; uart:uart1|tx:tx1|busy~2                                                   ; 13      ;
 ; Selector17~0                                                               ; 13      ;
 ; uart:uart1|estadoRX.estabilizandoInformacao                                ; 13      ;
@@ -1803,19 +1803,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:uart1|rx:rx1|estado.st_reset                                          ; 12      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[26]                             ; 11      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[28]                             ; 11      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[44]                             ; 11      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[9]                              ; 11      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[7]                              ; 11      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[44]                             ; 11      ;
 ; t_des:crito1|des:mapDes|sig_f_reset                                        ; 11      ;
 ; Selector420~0                                                              ; 11      ;
 ; uart:uart1|rx:rx1|index[1]                                                 ; 11      ;
 ; uart:uart1|rx:rx1|index[2]                                                 ; 11      ;
 ; estado.st_menuChave                                                        ; 11      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[31]                             ; 10      ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[8]                              ; 10      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[42]                             ; 10      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[45]                             ; 10      ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[37]                             ; 10      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[31]                             ; 10      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[8]                              ; 10      ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_f3_done                        ; 10      ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_ff_done                        ; 10      ;
 ; t_des:crito1|des:mapDes|state.op_f2_done                                   ; 10      ;
@@ -1848,9 +1848,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:uart1|enviar_busy                                                     ; 10      ;
 ; estado.st_resultado_seleciona_bloco                                        ; 10      ;
 ; contador[1]~0                                                              ; 10      ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[47]                             ; 9       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[14]                             ; 9       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[13]                             ; 9       ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[47]                             ; 9       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[39]                             ; 9       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[36]                             ; 9       ;
 ; t_des:crito1|des:mapDes|state.op_ff_done                                   ; 9       ;
@@ -1862,14 +1862,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; process_1~0                                                                ; 9       ;
 ; estado.st_retorna_texto_seleciona_bloco                                    ; 9       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[25]                             ; 8       ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[41]                             ; 8       ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[1]                              ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[19]                             ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[20]                             ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[21]                             ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[22]                             ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[32]                             ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[33]                             ; 8       ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[41]                             ; 8       ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[1]                              ; 8       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_reset_sbox                              ; 8       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_f1_done                        ; 8       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_fb_done                        ; 8       ;
@@ -1896,9 +1896,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; decodificador7seg:d1|saida[0]                                              ; 8       ;
 ; WideOr30~0                                                                 ; 8       ;
 ; controle_recebido~0                                                        ; 8       ;
-; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[2]                              ; 7       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[18]                             ; 7       ;
 ; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[11]                             ; 7       ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[2]                              ; 7       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|sig_f_reset                             ; 7       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_fe_done                        ; 7       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_fc_done                        ; 7       ;
@@ -2266,70 +2266,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; t_des:crito1|des:mapDes|Selector36~0                                       ; 3       ;
 ; t_des:crito1|des:mapDes|Selector24~0                                       ; 3       ;
 ; t_des:crito1|des:mapDes|Selector6~2                                        ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[28]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[4]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[20]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[12]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[60]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[36]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[60]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[44]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[52]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[27]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[3]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[19]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[11]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[59]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[4]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[28]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[20]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[12]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[35]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[59]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[43]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[51]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[25]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[1]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[9]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[17]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[57]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[3]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[27]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[19]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[11]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[33]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[57]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[49]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[41]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[58]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[34]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[50]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[42]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[26]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[1]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[25]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[9]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[17]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[2]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[26]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[10]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[18]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[56]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[32]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[40]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[48]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[24]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[34]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[58]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[50]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[42]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[0]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[8]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[24]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[16]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[31]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[7]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[23]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[15]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[63]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[8]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[32]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[56]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[48]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[40]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[39]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[63]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[47]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[55]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[29]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[5]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[21]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[13]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[61]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[7]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[31]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[23]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[15]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[37]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[61]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[45]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[53]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[30]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[6]                                       ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[22]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[14]                                      ; 3       ;
-; t_des:crito1|des:mapDes|textOut64[62]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[5]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[29]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[21]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[13]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[38]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[62]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[46]                                      ; 3       ;
 ; t_des:crito1|des:mapDes|textOut64[54]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[6]                                       ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[30]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[22]                                      ; 3       ;
+; t_des:crito1|des:mapDes|textOut64[14]                                      ; 3       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_f4_clean                       ; 3       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_f2_clean                       ; 3       ;
 ; t_un_des:decrito1|un_des:mapUN_Des|state.op_f1_clean                       ; 3       ;
@@ -2443,68 +2443,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:uart1|tx:tx1|datafll[2]                                               ; 2       ;
 ; s_tdes_text64[53]                                                          ; 2       ;
 ; s_tdes_text64[45]                                                          ; 2       ;
-; s_tdes_text64[23]                                                          ; 2       ;
-; s_tdes_text64[15]                                                          ; 2       ;
-; s_tdes_text64[51]                                                          ; 2       ;
-; s_tdes_text64[43]                                                          ; 2       ;
-; s_tdes_text64[47]                                                          ; 2       ;
-; s_tdes_text64[39]                                                          ; 2       ;
-; s_tdes_text64[55]                                                          ; 2       ;
-; s_tdes_text64[31]                                                          ; 2       ;
-; s_tdes_text64[57]                                                          ; 2       ;
-; s_tdes_text64[49]                                                          ; 2       ;
-; s_tdes_text64[41]                                                          ; 2       ;
-; s_tdes_text64[7]                                                           ; 2       ;
 ; s_tdes_text64[61]                                                          ; 2       ;
-; s_tdes_text64[35]                                                          ; 2       ;
-; s_tdes_text64[27]                                                          ; 2       ;
 ; s_tdes_text64[19]                                                          ; 2       ;
 ; s_tdes_text64[11]                                                          ; 2       ;
 ; s_tdes_text64[3]                                                           ; 2       ;
 ; s_tdes_text64[29]                                                          ; 2       ;
 ; s_tdes_text64[21]                                                          ; 2       ;
-; s_tdes_text64[5]                                                           ; 2       ;
 ; s_tdes_text64[13]                                                          ; 2       ;
 ; s_tdes_text64[37]                                                          ; 2       ;
-; s_tdes_text64[63]                                                          ; 2       ;
 ; s_tdes_text64[9]                                                           ; 2       ;
-; s_tdes_text64[59]                                                          ; 2       ;
-; s_tdes_text64[25]                                                          ; 2       ;
 ; s_tdes_text64[17]                                                          ; 2       ;
-; s_tdes_text64[33]                                                          ; 2       ;
+; s_tdes_text64[51]                                                          ; 2       ;
+; s_tdes_text64[59]                                                          ; 2       ;
+; s_tdes_text64[35]                                                          ; 2       ;
+; s_tdes_text64[43]                                                          ; 2       ;
 ; s_tdes_text64[1]                                                           ; 2       ;
+; s_tdes_text64[27]                                                          ; 2       ;
+; s_tdes_text64[23]                                                          ; 2       ;
+; s_tdes_text64[15]                                                          ; 2       ;
+; s_tdes_text64[47]                                                          ; 2       ;
+; s_tdes_text64[63]                                                          ; 2       ;
+; s_tdes_text64[39]                                                          ; 2       ;
+; s_tdes_text64[55]                                                          ; 2       ;
+; s_tdes_text64[5]                                                           ; 2       ;
+; s_tdes_text64[31]                                                          ; 2       ;
+; s_tdes_text64[57]                                                          ; 2       ;
+; s_tdes_text64[49]                                                          ; 2       ;
+; s_tdes_text64[33]                                                          ; 2       ;
+; s_tdes_text64[41]                                                          ; 2       ;
+; s_tdes_text64[7]                                                           ; 2       ;
+; s_tdes_text64[25]                                                          ; 2       ;
 ; s_tdes_text64[52]                                                          ; 2       ;
 ; s_tdes_text64[44]                                                          ; 2       ;
-; s_tdes_text64[22]                                                          ; 2       ;
-; s_tdes_text64[14]                                                          ; 2       ;
-; s_tdes_text64[50]                                                          ; 2       ;
-; s_tdes_text64[42]                                                          ; 2       ;
-; s_tdes_text64[46]                                                          ; 2       ;
-; s_tdes_text64[38]                                                          ; 2       ;
-; s_tdes_text64[54]                                                          ; 2       ;
-; s_tdes_text64[30]                                                          ; 2       ;
-; s_tdes_text64[56]                                                          ; 2       ;
-; s_tdes_text64[48]                                                          ; 2       ;
-; s_tdes_text64[40]                                                          ; 2       ;
-; s_tdes_text64[6]                                                           ; 2       ;
 ; s_tdes_text64[60]                                                          ; 2       ;
-; s_tdes_text64[34]                                                          ; 2       ;
-; s_tdes_text64[26]                                                          ; 2       ;
 ; s_tdes_text64[18]                                                          ; 2       ;
 ; s_tdes_text64[10]                                                          ; 2       ;
 ; s_tdes_text64[2]                                                           ; 2       ;
 ; s_tdes_text64[28]                                                          ; 2       ;
 ; s_tdes_text64[20]                                                          ; 2       ;
-; s_tdes_text64[4]                                                           ; 2       ;
 ; s_tdes_text64[12]                                                          ; 2       ;
 ; s_tdes_text64[36]                                                          ; 2       ;
-; s_tdes_text64[62]                                                          ; 2       ;
 ; s_tdes_text64[8]                                                           ; 2       ;
-; s_tdes_text64[58]                                                          ; 2       ;
-; s_tdes_text64[24]                                                          ; 2       ;
 ; s_tdes_text64[16]                                                          ; 2       ;
-; s_tdes_text64[32]                                                          ; 2       ;
+; s_tdes_text64[50]                                                          ; 2       ;
+; s_tdes_text64[58]                                                          ; 2       ;
+; s_tdes_text64[34]                                                          ; 2       ;
+; s_tdes_text64[42]                                                          ; 2       ;
 ; s_tdes_text64[0]                                                           ; 2       ;
+; s_tdes_text64[26]                                                          ; 2       ;
+; s_tdes_text64[22]                                                          ; 2       ;
+; s_tdes_text64[14]                                                          ; 2       ;
+; s_tdes_text64[46]                                                          ; 2       ;
+; s_tdes_text64[62]                                                          ; 2       ;
+; s_tdes_text64[38]                                                          ; 2       ;
+; s_tdes_text64[54]                                                          ; 2       ;
+; s_tdes_text64[4]                                                           ; 2       ;
+; s_tdes_text64[30]                                                          ; 2       ;
+; s_tdes_text64[56]                                                          ; 2       ;
+; s_tdes_text64[48]                                                          ; 2       ;
+; s_tdes_text64[32]                                                          ; 2       ;
+; s_tdes_text64[40]                                                          ; 2       ;
+; s_tdes_text64[6]                                                           ; 2       ;
+; s_tdes_text64[24]                                                          ; 2       ;
 ; t_des:crito1|des:mapDes|processKey:mapK|state.pc1                          ; 2       ;
 ; t_des:crito1|des:mapDes|processKey:mapK|state.rotacao2_1                   ; 2       ;
 ; t_des:crito1|des:mapDes|processKey:mapK|state.rotacao1_1                   ; 2       ;
@@ -2603,7 +2603,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
 ; Name                                                                           ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                            ; Location                                                                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
 +--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
-; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 1024         ; 64           ; 1024         ; 64           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 1024                        ; 64                          ; 1024                        ; 64                          ; 65536               ; 8    ; db/3DES_Project.ram0_ramTexto_b88d95a3.hdl.mif ; M9K_X78_Y36_N0, M9K_X78_Y35_N0, M9K_X78_Y34_N0, M9K_X78_Y33_N0, M9K_X78_Y39_N0, M9K_X78_Y38_N0, M9K_X78_Y40_N0, M9K_X78_Y37_N0 ; Old data             ; Old data        ; Old data        ;
+; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 1024         ; 64           ; 1024         ; 64           ; yes                    ; no                      ; yes                    ; no                      ; 65536 ; 1024                        ; 64                          ; 1024                        ; 64                          ; 65536               ; 8    ; db/3DES_Project.ram0_ramTexto_b88d95a3.hdl.mif ; M9K_X64_Y25_N0, M9K_X64_Y28_N0, M9K_X64_Y29_N0, M9K_X64_Y30_N0, M9K_X64_Y27_N0, M9K_X64_Y24_N0, M9K_X64_Y26_N0, M9K_X64_Y31_N0 ; Old data             ; Old data        ; Old data        ;
 +--------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2749,171 +2749,174 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------+---------------------------+
 ; Other Routing Resource Type ; Usage                     ;
 +-----------------------------+---------------------------+
-; Block interconnects         ; 8,155 / 342,891 ( 2 % )   ;
-; C16 interconnects           ; 136 / 10,120 ( 1 % )      ;
-; C4 interconnects            ; 4,021 / 209,544 ( 2 % )   ;
-; Direct links                ; 1,191 / 342,891 ( < 1 % ) ;
+; Block interconnects         ; 8,405 / 342,891 ( 2 % )   ;
+; C16 interconnects           ; 94 / 10,120 ( < 1 % )     ;
+; C4 interconnects            ; 4,282 / 209,544 ( 2 % )   ;
+; Direct links                ; 1,184 / 342,891 ( < 1 % ) ;
 ; Global clocks               ; 5 / 20 ( 25 % )           ;
-; Local interconnects         ; 2,429 / 119,088 ( 2 % )   ;
-; R24 interconnects           ; 175 / 9,963 ( 2 % )       ;
-; R4 interconnects            ; 5,428 / 289,782 ( 2 % )   ;
+; Local interconnects         ; 2,466 / 119,088 ( 2 % )   ;
+; R24 interconnects           ; 164 / 9,963 ( 2 % )       ;
+; R4 interconnects            ; 5,491 / 289,782 ( 2 % )   ;
 +-----------------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 14.23) ; Number of LABs  (Total = 416) ;
+; Number of Logic Elements  (Average = 14.07) ; Number of LABs  (Total = 423) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 5                             ;
-; 2                                           ; 2                             ;
-; 3                                           ; 4                             ;
-; 4                                           ; 3                             ;
-; 5                                           ; 4                             ;
-; 6                                           ; 0                             ;
-; 7                                           ; 6                             ;
-; 8                                           ; 8                             ;
-; 9                                           ; 14                            ;
-; 10                                          ; 10                            ;
-; 11                                          ; 9                             ;
-; 12                                          ; 8                             ;
-; 13                                          ; 19                            ;
-; 14                                          ; 21                            ;
-; 15                                          ; 49                            ;
-; 16                                          ; 254                           ;
+; 1                                           ; 6                             ;
+; 2                                           ; 1                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 6                             ;
+; 5                                           ; 2                             ;
+; 6                                           ; 4                             ;
+; 7                                           ; 7                             ;
+; 8                                           ; 4                             ;
+; 9                                           ; 11                            ;
+; 10                                          ; 8                             ;
+; 11                                          ; 22                            ;
+; 12                                          ; 18                            ;
+; 13                                          ; 13                            ;
+; 14                                          ; 14                            ;
+; 15                                          ; 43                            ;
+; 16                                          ; 259                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.97) ; Number of LABs  (Total = 416) ;
+; LAB-wide Signals  (Average = 2.01) ; Number of LABs  (Total = 423) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 35                            ;
-; 1 Clock                            ; 400                           ;
+; 1 Async. clear                     ; 50                            ;
+; 1 Clock                            ; 409                           ;
 ; 1 Clock enable                     ; 77                            ;
-; 1 Sync. clear                      ; 16                            ;
-; 1 Sync. load                       ; 26                            ;
-; 2 Clock enables                    ; 259                           ;
-; 2 Clocks                           ; 6                             ;
+; 1 Sync. clear                      ; 15                            ;
+; 1 Sync. load                       ; 24                            ;
+; 2 Clock enables                    ; 268                           ;
+; 2 Clocks                           ; 7                             ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 25.55) ; Number of LABs  (Total = 416) ;
+; Number of Signals Sourced  (Average = 25.43) ; Number of LABs  (Total = 423) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 2                             ;
-; 2                                            ; 3                             ;
+; 1                                            ; 4                             ;
+; 2                                            ; 2                             ;
 ; 3                                            ; 0                             ;
-; 4                                            ; 2                             ;
-; 5                                            ; 1                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 2                             ;
 ; 6                                            ; 3                             ;
 ; 7                                            ; 0                             ;
-; 8                                            ; 5                             ;
-; 9                                            ; 1                             ;
+; 8                                            ; 7                             ;
+; 9                                            ; 0                             ;
 ; 10                                           ; 4                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 5                             ;
-; 13                                           ; 3                             ;
-; 14                                           ; 9                             ;
-; 15                                           ; 6                             ;
-; 16                                           ; 12                            ;
-; 17                                           ; 8                             ;
-; 18                                           ; 9                             ;
-; 19                                           ; 13                            ;
-; 20                                           ; 11                            ;
-; 21                                           ; 4                             ;
-; 22                                           ; 7                             ;
-; 23                                           ; 11                            ;
-; 24                                           ; 15                            ;
+; 11                                           ; 4                             ;
+; 12                                           ; 7                             ;
+; 13                                           ; 4                             ;
+; 14                                           ; 8                             ;
+; 15                                           ; 5                             ;
+; 16                                           ; 6                             ;
+; 17                                           ; 6                             ;
+; 18                                           ; 16                            ;
+; 19                                           ; 17                            ;
+; 20                                           ; 8                             ;
+; 21                                           ; 6                             ;
+; 22                                           ; 16                            ;
+; 23                                           ; 13                            ;
+; 24                                           ; 12                            ;
 ; 25                                           ; 12                            ;
-; 26                                           ; 18                            ;
-; 27                                           ; 19                            ;
-; 28                                           ; 26                            ;
-; 29                                           ; 23                            ;
-; 30                                           ; 55                            ;
-; 31                                           ; 34                            ;
-; 32                                           ; 93                            ;
+; 26                                           ; 16                            ;
+; 27                                           ; 14                            ;
+; 28                                           ; 19                            ;
+; 29                                           ; 17                            ;
+; 30                                           ; 43                            ;
+; 31                                           ; 22                            ;
+; 32                                           ; 129                           ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 10.63) ; Number of LABs  (Total = 416) ;
+; Number of Signals Sourced Out  (Average = 10.58) ; Number of LABs  (Total = 423) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
-; 1                                                ; 8                             ;
-; 2                                                ; 7                             ;
-; 3                                                ; 13                            ;
+; 1                                                ; 12                            ;
+; 2                                                ; 9                             ;
+; 3                                                ; 10                            ;
 ; 4                                                ; 14                            ;
-; 5                                                ; 16                            ;
-; 6                                                ; 24                            ;
-; 7                                                ; 15                            ;
-; 8                                                ; 35                            ;
-; 9                                                ; 37                            ;
-; 10                                               ; 37                            ;
-; 11                                               ; 23                            ;
-; 12                                               ; 20                            ;
-; 13                                               ; 29                            ;
-; 14                                               ; 32                            ;
-; 15                                               ; 52                            ;
-; 16                                               ; 42                            ;
-; 17                                               ; 5                             ;
+; 5                                                ; 13                            ;
+; 6                                                ; 18                            ;
+; 7                                                ; 18                            ;
+; 8                                                ; 39                            ;
+; 9                                                ; 34                            ;
+; 10                                               ; 28                            ;
+; 11                                               ; 31                            ;
+; 12                                               ; 36                            ;
+; 13                                               ; 32                            ;
+; 14                                               ; 33                            ;
+; 15                                               ; 44                            ;
+; 16                                               ; 45                            ;
+; 17                                               ; 4                             ;
 ; 18                                               ; 2                             ;
-; 19                                               ; 2                             ;
-; 20                                               ; 2                             ;
+; 19                                               ; 0                             ;
+; 20                                               ; 0                             ;
 ; 21                                               ; 0                             ;
 ; 22                                               ; 0                             ;
 ; 23                                               ; 0                             ;
 ; 24                                               ; 0                             ;
 ; 25                                               ; 0                             ;
-; 26                                               ; 1                             ;
+; 26                                               ; 0                             ;
+; 27                                               ; 0                             ;
+; 28                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 18.71) ; Number of LABs  (Total = 416) ;
+; Number of Distinct Inputs  (Average = 18.94) ; Number of LABs  (Total = 423) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 0                             ;
+; 1                                            ; 2                             ;
 ; 2                                            ; 3                             ;
-; 3                                            ; 6                             ;
-; 4                                            ; 3                             ;
-; 5                                            ; 7                             ;
-; 6                                            ; 5                             ;
-; 7                                            ; 3                             ;
-; 8                                            ; 3                             ;
-; 9                                            ; 5                             ;
-; 10                                           ; 7                             ;
-; 11                                           ; 11                            ;
-; 12                                           ; 23                            ;
-; 13                                           ; 28                            ;
-; 14                                           ; 17                            ;
-; 15                                           ; 26                            ;
-; 16                                           ; 13                            ;
-; 17                                           ; 29                            ;
-; 18                                           ; 22                            ;
-; 19                                           ; 19                            ;
-; 20                                           ; 14                            ;
-; 21                                           ; 30                            ;
-; 22                                           ; 20                            ;
-; 23                                           ; 18                            ;
-; 24                                           ; 11                            ;
-; 25                                           ; 15                            ;
-; 26                                           ; 16                            ;
-; 27                                           ; 12                            ;
-; 28                                           ; 3                             ;
-; 29                                           ; 13                            ;
-; 30                                           ; 7                             ;
+; 3                                            ; 4                             ;
+; 4                                            ; 7                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 7                             ;
+; 7                                            ; 5                             ;
+; 8                                            ; 5                             ;
+; 9                                            ; 3                             ;
+; 10                                           ; 9                             ;
+; 11                                           ; 18                            ;
+; 12                                           ; 16                            ;
+; 13                                           ; 27                            ;
+; 14                                           ; 19                            ;
+; 15                                           ; 18                            ;
+; 16                                           ; 21                            ;
+; 17                                           ; 14                            ;
+; 18                                           ; 15                            ;
+; 19                                           ; 23                            ;
+; 20                                           ; 18                            ;
+; 21                                           ; 23                            ;
+; 22                                           ; 30                            ;
+; 23                                           ; 19                            ;
+; 24                                           ; 17                            ;
+; 25                                           ; 8                             ;
+; 26                                           ; 13                            ;
+; 27                                           ; 9                             ;
+; 28                                           ; 13                            ;
+; 29                                           ; 12                            ;
+; 30                                           ; 13                            ;
 ; 31                                           ; 10                            ;
-; 32                                           ; 10                            ;
+; 32                                           ; 11                            ;
 ; 33                                           ; 7                             ;
+; 34                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -3095,92 +3098,72 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +----------------------------------------------------------------+---------------------------------+-------------------+
 ; Source Clock(s)                                                ; Destination Clock(s)            ; Delay Added in ns ;
 +----------------------------------------------------------------+---------------------------------+-------------------+
-; clock,uart:uart1|newClock:c1|newClock,uart:uart1|tx:tx1|busy~1 ; uart:uart1|newClock:c1|newClock ; 13.0              ;
-; clock                                                          ; uart:uart1|tx:tx1|busy~1        ; 11.9              ;
-; clock                                                          ; clock                           ; 3.2               ;
+; clock,uart:uart1|newClock:c1|newClock,uart:uart1|tx:tx1|busy~1 ; uart:uart1|newClock:c1|newClock ; 17.9              ;
+; clock                                                          ; uart:uart1|tx:tx1|busy~1        ; 14.5              ;
+; clock                                                          ; clock                           ; 2.1               ;
+; clock,uart:uart1|newClock:c1|newClock                          ; clock                           ; 1.7               ;
 +----------------------------------------------------------------+---------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                      ;
-+-----------------------------------------+------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                         ; Destination Register                                                                                 ; Delay Added in ns ;
-+-----------------------------------------+------------------------------------------------------------------------------------------------------+-------------------+
-; uart:uart1|tx:tx1|busy~1                ; uart:uart1|tx:tx1|busy~_emulated                                                                     ; 2.447             ;
-; uart:uart1|tx_data[1]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[2]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[0]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[7]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[5]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[6]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[4]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx_data[3]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 1.489             ;
-; uart:uart1|tx:tx1|index[3]~_emulated    ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 1.032             ;
-; uart:uart1|tx:tx1|busy~_emulated        ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 1.032             ;
-; uart:uart1|tx:tx1|index[3]~1            ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 1.032             ;
-; uart:uart1|tx_start                     ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 1.032             ;
-; uart:uart1|tx:tx1|index[1]~_emulated    ; uart:uart1|tx:tx1|index[1]~_emulated                                                                 ; 0.986             ;
-; uart:uart1|tx:tx1|index[1]~9            ; uart:uart1|tx:tx1|index[1]~_emulated                                                                 ; 0.986             ;
-; uart:uart1|tx:tx1|index[0]~_emulated    ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 0.970             ;
-; uart:uart1|tx:tx1|index[0]~13           ; uart:uart1|tx:tx1|index[0]~_emulated                                                                 ; 0.970             ;
-; uart:uart1|tx:tx1|index[2]~_emulated    ; uart:uart1|tx:tx1|index[2]~_emulated                                                                 ; 0.648             ;
-; uart:uart1|tx:tx1|index[2]~5            ; uart:uart1|tx:tx1|index[2]~_emulated                                                                 ; 0.648             ;
-; s_ram_endereco[1]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.330             ;
-; s_ram_endereco[0]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.330             ;
-; s_ram_endereco[9]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.315             ;
-; s_ram_endereco[8]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.315             ;
-; uart:uart1|tx:tx1|tx_line~_emulated     ; uart:uart1|tx:tx1|tx_line~1                                                                          ; 0.216             ;
-; uart:uart1|tx:tx1|tx_line~1             ; uart:uart1|tx:tx1|tx_line~1                                                                          ; 0.216             ;
-; uart:uart1|tx:tx1|datafll[5]            ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 0.119             ;
-; uart:uart1|tx:tx1|datafll[4]            ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 0.119             ;
-; uart:uart1|tx:tx1|datafll[6]            ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 0.107             ;
-; uart:uart1|tx:tx1|datafll[7]            ; uart:uart1|tx:tx1|tx_line~_emulated                                                                  ; 0.107             ;
-; s_ram_endereco[3]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.056             ;
-; s_ram_endereco[2]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.056             ;
-; s_ram_endereco[5]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.056             ;
-; s_ram_endereco[6]                       ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~porta_address_reg0 ; 0.056             ;
-; t_des:crito1|resultadoOperacao3[59]     ; t_des:crito1|textOut64[59]                                                                           ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[36]     ; t_des:crito1|textOut64[36]                                                                           ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[10]     ; t_des:crito1|textOut64[10]                                                                           ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[21]     ; t_des:crito1|textOut64[21]                                                                           ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[49]     ; t_des:crito1|textOut64[49]                                                                           ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[1]      ; t_des:crito1|textOut64[1]                                                                            ; 0.036             ;
-; t_des:crito1|resultadoOperacao3[4]      ; t_des:crito1|textOut64[4]                                                                            ; 0.036             ;
-; uart:uart1|estadoTX.esperaComandoEnviar ; uart:uart1|estadoTX.enviandoInformacao                                                               ; 0.024             ;
-; s_comm_enviar                           ; uart:uart1|estadoTX.enviandoInformacao                                                               ; 0.024             ;
-; quantidade_blocos[9]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[8]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[7]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[6]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[5]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[4]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[3]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[2]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[1]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[8]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[7]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[6]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[5]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[4]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[3]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[2]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[1]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[0]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_encripta_seleciona_bloco      ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_encripta_recebe_resultado     ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_decripta_seleciona_bloco      ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_decripta_recebe_resultado     ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_resultado_seleciona_bloco     ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_retorna_texto_seleciona_bloco ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; estado.st_carregando_texto              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; i[9]                                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; quantidade_blocos[0]                    ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; edge[1]                                 ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-; edge[0]                                 ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a35~portb_address_reg0 ; 0.020             ;
-+-----------------------------------------+------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 71 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                            ;
++------------------------------------------------+-----------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                ; Destination Register                                                                                ; Delay Added in ns ;
++------------------------------------------------+-----------------------------------------------------------------------------------------------------+-------------------+
+; uart:uart1|tx:tx1|busy~1                       ; uart:uart1|tx:tx1|busy~_emulated                                                                    ; 2.658             ;
+; uart:uart1|tx_data[1]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[7]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[5]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[6]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[4]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[3]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.907             ;
+; uart:uart1|tx_data[2]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.646             ;
+; uart:uart1|tx_data[0]                          ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 1.367             ;
+; uart:uart1|tx:tx1|index[3]~_emulated           ; uart:uart1|tx:tx1|index[2]~_emulated                                                                ; 1.351             ;
+; uart:uart1|tx:tx1|busy~_emulated               ; uart:uart1|tx:tx1|index[2]~_emulated                                                                ; 1.351             ;
+; uart:uart1|tx:tx1|index[3]~1                   ; uart:uart1|tx:tx1|index[2]~_emulated                                                                ; 1.351             ;
+; uart:uart1|tx_start                            ; uart:uart1|tx:tx1|index[2]~_emulated                                                                ; 1.351             ;
+; uart:uart1|tx:tx1|index[0]~_emulated           ; uart:uart1|tx:tx1|index[1]~_emulated                                                                ; 1.300             ;
+; uart:uart1|tx:tx1|index[0]~13                  ; uart:uart1|tx:tx1|index[1]~_emulated                                                                ; 1.300             ;
+; uart:uart1|tx:tx1|index[1]~_emulated           ; uart:uart1|tx:tx1|index[1]~_emulated                                                                ; 1.288             ;
+; uart:uart1|tx:tx1|index[1]~9                   ; uart:uart1|tx:tx1|index[1]~_emulated                                                                ; 1.288             ;
+; uart:uart1|tx:tx1|index[2]~_emulated           ; uart:uart1|tx:tx1|index[3]~_emulated                                                                ; 1.006             ;
+; uart:uart1|tx:tx1|index[2]~5                   ; uart:uart1|tx:tx1|index[3]~_emulated                                                                ; 1.006             ;
+; uart:uart1|estadoTX.enviandoInformacao         ; uart:uart1|estadoTX.esperaComandoEnviar                                                             ; 0.714             ;
+; uart:uart1|estadoTX.esperaComandoEnviar        ; uart:uart1|estadoTX.esperaComandoEnviar                                                             ; 0.714             ;
+; s_comm_enviar                                  ; uart:uart1|estadoTX.esperaComandoEnviar                                                             ; 0.714             ;
+; s_ram_endereco[9]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.225             ;
+; uart:uart1|tx:tx1|datafll[3]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.113             ;
+; uart:uart1|tx:tx1|datafll[1]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.113             ;
+; uart:uart1|tx:tx1|datafll[5]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.108             ;
+; uart:uart1|tx:tx1|datafll[4]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.108             ;
+; uart:uart1|tx:tx1|datafll[6]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.097             ;
+; uart:uart1|tx:tx1|datafll[7]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.097             ;
+; uart:uart1|tx:tx1|datafll[2]                   ; uart:uart1|tx:tx1|tx_line~_emulated                                                                 ; 0.061             ;
+; t_des:crito1|resultadoOperacao3[36]            ; t_des:crito1|textOut64[36]                                                                          ; 0.037             ;
+; t_des:crito1|resultadoOperacao3[27]            ; t_des:crito1|textOut64[27]                                                                          ; 0.037             ;
+; t_des:crito1|resultadoOperacao3[46]            ; t_des:crito1|textOut64[46]                                                                          ; 0.037             ;
+; t_des:crito1|resultadoOperacao3[61]            ; t_des:crito1|textOut64[61]                                                                          ; 0.037             ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[18] ; t_des:crito1|des:mapDes|l2[19]                                                                      ; 0.037             ;
+; t_des:crito1|resultadoOperacao3[14]            ; t_des:crito1|textOut64[14]                                                                          ; 0.037             ;
+; t_des:crito1|textOut64[17]                     ; s_ram_datain[46]                                                                                    ; 0.033             ;
+; t_des:crito1|textOut64[12]                     ; s_ram_datain[51]                                                                                    ; 0.033             ;
+; t_des:crito1|textOut64[20]                     ; s_ram_datain[43]                                                                                    ; 0.033             ;
+; t_des:crito1|textOut64[54]                     ; s_ram_datain[9]                                                                                     ; 0.033             ;
+; t_des:crito1|des:mapDes|f:mapF|sig_bus_xor[37] ; t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox7:mapSbox7|busOut4[2]                               ; 0.022             ;
+; uart:uart1|tx:tx1|tx_line~_emulated            ; uart:uart1|tx:tx1|tx_line~1                                                                         ; 0.013             ;
+; uart:uart1|tx:tx1|tx_line~1                    ; uart:uart1|tx:tx1|tx_line~1                                                                         ; 0.013             ;
+; s_ram_endereco[3]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[2]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[5]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[4]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[7]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[6]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
+; s_ram_endereco[8]                              ; ramTexto:mapram|altsyncram:ram_rtl_0|altsyncram_qcm1:auto_generated|ram_block1a4~porta_address_reg0 ; 0.011             ;
++------------------------------------------------+-----------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 50 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -3285,14 +3268,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:23
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:24
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 21% of the available device resources in the region that extends from location X46_Y37 to location X57_Y48
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:22
+    Info (170196): Router estimated peak interconnect usage is 26% of the available device resources in the region that extends from location X46_Y24 to location X57_Y36
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 12.61 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 14.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3300,10 +3283,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:06
 Info (144001): Generated suppressed messages file E:/TCC/Codigos/Driver/Hardware/VHDL/v6/VHD/output_files/3DES_Project.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 923 megabytes
-    Info: Processing ended: Sun Feb 14 14:50:27 2016
-    Info: Elapsed time: 00:01:25
-    Info: Total CPU time (on all processors): 00:01:22
+    Info: Peak virtual memory: 935 megabytes
+    Info: Processing ended: Sun Feb 14 18:21:49 2016
+    Info: Elapsed time: 00:01:32
+    Info: Total CPU time (on all processors): 00:01:29
 
 
 +----------------------------+

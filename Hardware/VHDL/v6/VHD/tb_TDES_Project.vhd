@@ -58,11 +58,18 @@ ARCHITECTURE tb_TDES_Project_behav OF tb_TDES_Project IS
 					st_5,
 					st_6,
 					st_7,
-					st_7_0,
-					st_7_1,
-					st_7_2,
-					st_7_3,
 					st_8,
+					st_8_1,
+					st_8_2,
+					st_8_3,
+					st_8_4,
+					st_8_5_1_1,
+					st_8_5_1_2,
+					st_8_5_2_1,
+					st_8_5_2_2,
+					st_8_5_3_1,
+					st_8_5_3_2,
+					st_8_8,
 					st_9,
 					st_10,
 					st_11_1,
@@ -186,33 +193,67 @@ BEGIN
 
 				when st_7 =>
 					if (j > "0111") then
-						estado <= st_7_0;
+						estado <= st_8_1;
 					end if;
 
-				when st_7_0 =>
+				when st_8_1 =>
 					if (i > "1000") then
-						estado <= st_7_1;
+						estado <= st_8_2;
 					end if;
 
-				when st_7_1 =>
+				when st_8_2 =>
 					if (i > "1000") then
-						estado <= st_7_2;
+						estado <= st_8_3;
 					end if;
 
-				when st_7_2 =>
+				when st_8_3 =>
 					if (i > "1000") then
-						estado <= st_7_3;
+						estado <= st_8_4;
 					end if;
 
-				when st_7_3 =>
+				when st_8_4 =>
 					if (i > "1000") then
-						estado <= st_7_3;
+						estado <= st_8_5_1_1;
 					end if;
 
-				when st_8 =>
+				when st_8_5_1_1 =>
+					if (j > "0111") then
+						estado <= st_8_5_1_2;
+					end if;
+
+				when st_8_5_1_2 =>
+					if (j > "0111") then
+						estado <= st_8_5_2_1;
+					end if;
+
+				when st_8_5_2_1 =>
+					if (j > "0111") then
+						estado <= st_8_5_2_2;
+					end if;
+
+				when st_8_5_2_2 =>
+					if (j > "0111") then
+						estado <= st_8_5_3_1;
+					end if;
+
+				when st_8_5_3_1 =>
+					if (j > "0111") then
+						estado <= st_8_5_3_2;
+					end if;
+
+				when st_8_5_3_2 =>
+					if (j > "0111") then
+						estado <= st_8_8;
+					end if;
+
+
+
+				when st_8_8 =>
 					if (i > "1000") then
 						estado <= st_9;
 					end if;
+
+
 
 				when st_9 =>
 					if (i > "1000") then
@@ -495,7 +536,9 @@ BEGIN
 
 				-- envia bloco de texto 1
 				WHEN st_6 =>
-					bloco := x"726f646f6c666f6c"; --72 6f 64 6f 6c 66 6f 6c  61 62 69 61 70 61 72 69
+					-- bloco := x"6c6f666c6f646f72"; --72 6f 64 6f 6c 66 6f 6c  61 62 69 61 70 61 72 69 encripta
+					bloco := x"6398f5305d175929";  -- 29 59 17 5d 30 f5 98 63  	f4	ad	d0	c8	b9	e2	5f	77 decripta
+ 
 						
 					if (s_newClock = '1' and flag = '0') then  
 
@@ -538,7 +581,8 @@ BEGIN
 
 				-- envia bloco de texto 2
 				WHEN st_7 =>
-					bloco := x"6162696170617269";
+					-- bloco := x"6972617061696261"; -- 61 62 69 61 70 61 72 69 encripta
+					bloco := x"775fe2b9c8d0adf4"; -- f4	ad	d0	c8	b9	e2	5f	77 decripta
 						
 					if (s_newClock = '1' and flag = '0') then  
 
@@ -580,9 +624,9 @@ BEGIN
 					end if ;
 
 
-				-- define texto
-				WHEN st_7_0 =>
-					byte := x"66"; --f
+				-- nada
+				WHEN st_8_1 =>
+					byte := x"66";
 
 					if (s_newClock = '1' and flag = '0') then  
 
@@ -606,94 +650,8 @@ BEGIN
 					end if ;
 
 
-				-- define texto
-				WHEN st_7_1 =>
-					byte := x"62"; --b
-
-					if (s_newClock = '1' and flag = '0') then  
-
-						case i is 
-							when "0000" => s_pin_1_in <= '0';        flag := '1';   i <= i + 1; 
-							when "0001" => s_pin_1_in <= byte (0);   flag := '1';   i <= i + 1; 
-							when "0010" => s_pin_1_in <= byte (1);   flag := '1';   i <= i + 1; 
-							when "0011" => s_pin_1_in <= byte (2);   flag := '1';   i <= i + 1; 
-							when "0100" => s_pin_1_in <= byte (3);   flag := '1';   i <= i + 1; 
-							when "0101" => s_pin_1_in <= byte (4);   flag := '1';   i <= i + 1; 
-							when "0110" => s_pin_1_in <= byte (5);   flag := '1';   i <= i + 1; 
-							when "0111" => s_pin_1_in <= byte (6);   flag := '1';   i <= i + 1; 
-							when "1000" => s_pin_1_in <= byte (7);   flag := '1';   i <= i + 1;  
-							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-						end case;
-
-					elsif (s_newClock = '0' and flag = '1') then
-						flag := '0';
-
-					end if ;
-
-
-				-- define texto
-				WHEN st_7_2 =>
-					byte := x"66"; --F
-
-					if (s_newClock = '1' and flag = '0') then  
-
-						case i is 
-							when "0000" => s_pin_1_in <= '1';        flag := '1';   i <= i + 1; 
-							when "0001" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0010" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0011" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0100" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0101" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0110" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0111" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "1000" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1;  
-							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-						end case;
-
-
-
-					elsif (s_newClock = '0' and flag = '1') then
-						flag := '0';
-
-					end if ;
-
-
-				-- define texto
-				WHEN st_7_3 =>
-					byte := x"00"; --F
-
-					if (s_newClock = '1' and flag = '0') then  
-
-						case i is 
-							when "0000" => s_pin_1_in <= '1';        flag := '1';   i <= i + 1; 
-							when "0001" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0010" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0011" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0100" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0101" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0110" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "0111" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1; 
-							when "1000" => s_pin_1_in <= '1';   flag := '1';   i <= i + 1;  
-							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
-						end case;
-
-					elsif (s_newClock = '0' and flag = '1') then
-						flag := '0';
-
-					end if ;
-
-
-
-
-
-
-
-
-				-- define texto
-				WHEN st_8 =>
+				-- principal
+				WHEN st_8_2 =>
 					byte := x"46"; --F
 
 					if (s_newClock = '1' and flag = '0') then  
@@ -716,6 +674,355 @@ BEGIN
 						flag := '0';
 
 					end if ;
+
+
+				-- menu chave
+				WHEN st_8_3 =>
+					byte := x"6B"; --k
+
+					if (s_newClock = '1' and flag = '0') then  
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';        flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= byte (0);   flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= byte (1);   flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= byte (2);   flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= byte (3);   flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= byte (4);   flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= byte (5);   flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= byte (6);   flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= byte (7);   flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+						end case;
+
+
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+					end if ;
+
+
+				-- define chave
+				WHEN st_8_4 =>
+					byte := x"61"; --a
+
+					if (s_newClock = '1' and flag = '0') then  
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';        flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= byte (0);   flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= byte (1);   flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= byte (2);   flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= byte (3);   flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= byte (4);   flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= byte (5);   flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= byte (6);   flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= byte (7);   flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+					end if ;
+
+
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_1_1 =>
+					bloco := x"3333323331333033"; 
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_1_2 =>
+					bloco := x"3733363335333433"; --72 6f 64 6f 6c 66 6f 6c  61 62 69 61 70 61 72 69
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_2_1 =>
+					bloco := x"3333323331333033"; 
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_2_2 =>
+					bloco := x"3733363335333433"; --72 6f 64 6f 6c 66 6f 6c  61 62 69 61 70 61 72 69
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_3_1 =>
+					bloco := x"3333323331333033"; 
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+
+				-- envia bloco de texto 1
+				WHEN st_8_5_3_2 =>
+					bloco := x"3733363335333433"; --72 6f 64 6f 6c 66 6f 6c  61 62 69 61 70 61 72 69
+						
+					if (s_newClock = '1' and flag = '0') then  
+
+						if (i = "1001" or j > "0111") then
+
+							case j is 
+								when "0000" => j <= j + 1; 
+								when "0001" => j <= j + 1; 
+								when "0010" => j <= j + 1; 
+								when "0011" => j <= j + 1; 
+								when "0100" => j <= j + 1; 
+								when "0101" => j <= j + 1; 
+								when "0110" => j <= j + 1; 
+								when "0111" => j <= j + 1; 
+								when "1000" => j <= (others => '0');  
+								when "1001" => j <= (others => '0');
+								when others => j <= (others => '0');
+							end case;
+
+						end if;
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';                                          flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= bloco (0  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= bloco (1  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= bloco (2  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= bloco (3  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= bloco (4  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= bloco (5  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= bloco (6  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= bloco (7  +  (to_integer(unsigned(j)) * 8));    flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';                                          flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+						end if ;
+
+
+
+
+				-- define chave
+				WHEN st_8_8 =>
+					byte := x"46"; --F
+
+					if (s_newClock = '1' and flag = '0') then  
+
+						case i is 
+							when "0000" => s_pin_1_in <= '0';        flag := '1';   i <= i + 1; 
+							when "0001" => s_pin_1_in <= byte (0);   flag := '1';   i <= i + 1; 
+							when "0010" => s_pin_1_in <= byte (1);   flag := '1';   i <= i + 1; 
+							when "0011" => s_pin_1_in <= byte (2);   flag := '1';   i <= i + 1; 
+							when "0100" => s_pin_1_in <= byte (3);   flag := '1';   i <= i + 1; 
+							when "0101" => s_pin_1_in <= byte (4);   flag := '1';   i <= i + 1; 
+							when "0110" => s_pin_1_in <= byte (5);   flag := '1';   i <= i + 1; 
+							when "0111" => s_pin_1_in <= byte (6);   flag := '1';   i <= i + 1; 
+							when "1000" => s_pin_1_in <= byte (7);   flag := '1';   i <= i + 1;  
+							when "1001" => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+							when others => s_pin_1_in <= '1';        flag := '1';   i <= (others => '0');
+						end case;
+
+					elsif (s_newClock = '0' and flag = '1') then
+						flag := '0';
+
+					end if ;
+
+
+
 
 
 				-- define texto
@@ -746,7 +1053,7 @@ BEGIN
 
 				-- define texto
 				WHEN st_10 =>
-					byte := x"61"; --a
+					byte := x"62"; --b
 
 					if (s_newClock = '1' and flag = '0') then  
 

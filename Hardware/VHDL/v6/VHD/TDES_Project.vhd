@@ -43,7 +43,8 @@ architecture TDES_Project_behav of TDES_Project is
 
 
 	type st_type is (st_reset, st_menuPrincipal, 
-					st_menuChave, st_recebeChave, st_feedbackChave, st_retornaChave, 
+					st_menuChave, st_feedbackChave, st_retornaChave, 
+					st_recebeChave_espera_hexa, st_recebeChave_recebe_hexa, st_recebeChave_decodifica_hexa,
 					st_menuTexto, st_recebeTexto, st_feedbackTexto, st_retornaTexto, st_inicializa_envio_texto,
 					st_retorna_texto_recebe_ram, st_retorna_texto_envia, st_retorna_texto_seleciona_bloco,
 
@@ -55,9 +56,7 @@ architecture TDES_Project_behav of TDES_Project is
 					st_encripta_recebe_ram, st_encripta_opera, st_encripta_recebe_resultado, st_encripta_seleciona_bloco,
 					st_decripta_recebe_ram, st_decripta_opera, st_decripta_recebe_resultado, st_decripta_seleciona_bloco,
 					
-					st_resultado_recebe_ram, st_resultado_envia, st_resultado_seleciona_bloco,
-					pronto);
-	
+					st_resultado_recebe_ram, st_resultado_envia, st_resultado_seleciona_bloco);
 	signal estado                          : st_type := st_reset;
 	
 
@@ -356,11 +355,30 @@ begin
 
 
 
-				when st_recebeChave=>
-					-- Verifica se a quantidade de dados lida e' um numero grande
-					if (contador(5 downto 0) = "110000") then 
-						estado  <= st_feedbackChave;
+--				when st_recebeChave=>
+--					-- Verifica se a quantidade de dados lida e' um numero grande
+--					if (contador(5 downto 0) = "110000") then 
+--						estado  <= st_feedbackChave;
+--					end if;
+
+
+				when st_recebeChave_espera_hexa => 
+					if(s_comm_recebido = '1' and contador < 48) then
+						estado <= st_recebeChave_recebe_hexa;
 					end if;
+
+					if(contador >= 48) then
+						estado <= st_feedbackChave;
+					end if;
+
+				when st_recebeChave_recebe_hexa =>
+					estado <= st_recebeChave_decodifica_hexa;
+
+				when st_recebeChave_decodifica_hexa =>
+					if(s_comm_recebido = '0') then
+						estado <= st_recebeChave_espera_hexa;
+					end if;
+
 
 				when st_feedbackChave =>
 					if edge = "10" then
@@ -383,7 +401,7 @@ begin
 							when x"46" => -- F
 								estado <= st_menuPrincipal;
 							when x"61" => -- a
-								estado <= st_recebeChave;
+								estado <= st_recebeChave_espera_hexa;
 							when x"62" => -- b
 								estado <= st_retornaChave;
 							when x"63" => -- c
@@ -486,28 +504,23 @@ begin
 					s_reset_all_modules       <= '1';
 					s_reset_comunicacao       <= '0';
 
-					s_tdecodificador_displays  <= x"0000_0000";
-					led_reset                   <= '1';
-					leds_green                             <= s_dado_recebido;
+					s_tdecodificador_displays <= x"0000_0000";
+					led_reset                 <= '1';
+					leds_green                <= s_dado_recebido;
 
 					s_comm_enviar             <= '0';
 					s_dado_enviar             <= x"52"; -- 0
 					s_dado_enviar             <= "00000000";
 
-					flag                        := '0';
-					contador             <= "000000";
-					edge                        <= "00";
+					flag                      := '0';
+					contador                  <= (others => '0');
+					edge                      <= "00";
 
-					s_tdes_reset               <= '1';
-					reg_key_192              <= x"000000000000000000000000000000000000000000000000";
-					--reg_key_192              <= x"133457799BBCDFF1133457799BBCDFF1133457799BBCDFF1";
-					s_tdes_text64              <= x"0000000000000000";
-					--s_tdes_text64              <= x"0123456789ABCDEF";
-	
-					case s_dado_recebido is 
-						when x"73" => -- s
-						when others =>
-					end case;
+					s_tdes_reset              <= '1';
+					reg_key_192               <= (others => '0');
+					--reg_key_192               <= x"133457799BBCDFF1133457799BBCDFF1133457799BBCDFF1";
+					s_tdes_text64             <= (others => '0');
+					--s_tdes_text64             <= x"0123456789ABCDEF";
 					
 					
 				when st_menuPrincipal => 	
@@ -524,35 +537,58 @@ begin
 				-- CC    C hh   hh aa  aaa   vvv   eeeee  
 				--  CCCCC  hh   hh  aaa aa    v     eeeee 
 				when st_menuChave=>
-					leds_green                               <= s_dado_recebido;
+					leds_green                             <= s_dado_recebido;
 
 					s_tdecodificador_displays(3 downto 0)  <=  x"C";
 					s_tdecodificador_displays(31 downto 4) <=  x"0000000";
-					contador                          <= "000000";
-					edge                                     <= "00";
-					flag                                     := '0';
-					
-					
-				when st_recebeChave =>
-					leds_green                                <= "00" & contador(5 downto 0);
-					
+					contador                               <= "000000";
+					edge                                   <= "00";
+					flag                                   := '0';
+
+
+				when st_recebeChave_espera_hexa =>
+					leds_green                              <= "00" & contador(5 downto 0);
 					s_tdecodificador_displays(3 downto 0)   <=  x"d";
 					s_tdecodificador_displays(23 downto 20) <= s_dado_recebido(3 downto 0);
-					
-					if (contador < 48) then		
-						s_tdecodificador_displays(11 downto 8)  <= contador(3 downto 0);
-						s_tdecodificador_displays(15 downto 12) <= "00" & contador(5 downto 4);
-						
-						if (s_comm_recebido = '1' and edge = "01") then
-							reg_key_192             <= std_logic_vector(shift_left(unsigned(reg_key_192), 4));
-							reg_key_192(188 to 191) <= s_dado_recebido(3 downto 0);
-							contador             <= contador + 1; 
-							edge                        <= "00";
-							
-						elsif (s_comm_recebido = '0' and edge = "00") then
-							edge                        <= "01";
-						end if;
-					end if;
+					s_tdecodificador_displays(11 downto 8)  <= contador(3 downto 0);
+					s_tdecodificador_displays(15 downto 12) <= "00" & contador(5 downto 4);
+
+
+				when st_recebeChave_recebe_hexa =>
+					reg_key_192       <= std_logic_vector(shift_left(unsigned(reg_key_192), 4));
+					bloco(7 downto 0) := s_dado_recebido(7 downto 0);
+					contador          <= contador + 1; 
+
+
+				when st_recebeChave_decodifica_hexa =>
+
+					case bloco(7 downto 0) is
+						when x"30" => reg_key_192(188 to 191) <= x"0";
+						when x"31" => reg_key_192(188 to 191) <= x"1"; 
+						when x"32" => reg_key_192(188 to 191) <= x"2";
+						when x"33" => reg_key_192(188 to 191) <= x"3";
+						when x"34" => reg_key_192(188 to 191) <= x"4"; 
+						when x"35" => reg_key_192(188 to 191) <= x"5";
+						when x"36" => reg_key_192(188 to 191) <= x"6";
+						when x"37" => reg_key_192(188 to 191) <= x"7"; 
+						when x"38" => reg_key_192(188 to 191) <= x"8";
+						when x"39" => reg_key_192(188 to 191) <= x"9";
+						when x"41" => reg_key_192(188 to 191) <= x"a"; 
+						when x"42" => reg_key_192(188 to 191) <= x"b";
+						when x"43" => reg_key_192(188 to 191) <= x"c";
+						when x"44" => reg_key_192(188 to 191) <= x"d"; 
+						when x"45" => reg_key_192(188 to 191) <= x"e";
+						when x"46" => reg_key_192(188 to 191) <= x"f";
+						when x"61" => reg_key_192(188 to 191) <= x"a"; 
+						when x"62" => reg_key_192(188 to 191) <= x"b";
+						when x"63" => reg_key_192(188 to 191) <= x"c";
+						when x"64" => reg_key_192(188 to 191) <= x"d"; 
+						when x"65" => reg_key_192(188 to 191) <= x"e";
+						when x"66" => reg_key_192(188 to 191) <= x"f"; 
+						when others => reg_key_192(188 to 191)<= x"0";
+					end case;
+
+
 			
 				
 				WHEN st_retornaChave =>
@@ -799,23 +835,23 @@ begin
 						when "00" =>
 							if (s_comm_enviar_busy = '0') then
 								case contador is
-									when "000111" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "000110";
-									when "000110" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000101";
-									when "000101" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000100";
-									when "000100" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000011";
-									when "000011" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000010";
-									when "000010" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000001";
-									when "000001" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000000";
-									when "000000" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "001000"; i <= i + 1;
+									--when "000111" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "000110";
+									--when "000110" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000101";
+									--when "000101" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000100";
+									--when "000100" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000011";
+									--when "000011" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000010";
+									--when "000010" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000001";
+									--when "000001" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000000";
+									--when "000000" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "001000"; i <= i + 1;
 
-									-- when "000111" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "000110";
-									-- when "000110" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000101";
-									-- when "000101" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000100";
-									-- when "000100" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000011";
-									-- when "000011" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000010";
-									-- when "000010" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000001";
-									-- when "000001" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000000";
-									-- when "000000" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "001000"; i <= i + 1;
+									when "000111" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "000110";
+									when "000110" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000101";
+									when "000101" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000100";
+									when "000100" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000011";
+									when "000011" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000010";
+									when "000010" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000001";
+									when "000001" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000000";
+									when "000000" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "001000"; i <= i + 1;
 									when others  => s_dado_enviar <= "00000000";
 								end case;
 
@@ -873,14 +909,14 @@ begin
 				--         pp                                                  
 
 				when st_menuOperacoes=>
-					s_tdecodificador_displays(3 downto 0)  <=  x"3";
-					s_tdecodificador_displays(31 downto 4) <=  (others => '0');
+					s_tdecodificador_displays(3 downto 0)  <= x"3";
+					s_tdecodificador_displays(31 downto 4) <= (others => '0');
 					leds_green                 	           <= s_dado_recebido;
 					s_tdes_reset               	           <= '1';
 					s_tundes_reset             	           <= '1';
-					contador                   	           <= "000000";
+					contador                   	           <= (others => '0');
 					i                          	           <= (others => '0');
-					edge                       	           <= "00";
+					edge                       	           <= (others => '0');
 					flag                       	           := '0';
 					bloco                                  := (others => '0');
 
@@ -901,14 +937,7 @@ begin
 				-- Opera o bloco recebido pela ram
 				when st_encripta_opera =>
 					s_tdes_reset  <= '0';
-					s_tdes_text64 <= s_ram_dataout(7  downto 0 ) &
-									 s_ram_dataout(15 downto 8 ) &
-									 s_ram_dataout(23 downto 16) &
-									 s_ram_dataout(31 downto 24) &
-									 s_ram_dataout(39 downto 32) &
-									 s_ram_dataout(47 downto 40) &
-									 s_ram_dataout(55 downto 48) &
-									 s_ram_dataout(63 downto 56);
+					s_tdes_text64 <= s_ram_dataout;
 					
 
 				-- Salva o resultado na ram
@@ -940,14 +969,7 @@ begin
 				-- Opera o bloco recebido pela ram
 				when st_decripta_opera =>
 					s_tundes_reset  <= '0';
-					s_tundes_text64 <= s_ram_dataout(7  downto 0 ) &
-									 s_ram_dataout(15 downto 8 ) &
-									 s_ram_dataout(23 downto 16) &
-									 s_ram_dataout(31 downto 24) &
-									 s_ram_dataout(39 downto 32) &
-									 s_ram_dataout(47 downto 40) &
-									 s_ram_dataout(55 downto 48) &
-									 s_ram_dataout(63 downto 56);
+					s_tundes_text64 <= s_ram_dataout;
 
 				-- Salva o resultado na ram
 				when st_decripta_recebe_resultado =>
@@ -1043,23 +1065,23 @@ begin
 						when "00" =>
 							if (s_comm_enviar_busy = '0') then
 								case contador is
-									-- when "000111" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "000110";
-									-- when "000110" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000101";
-									-- when "000101" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000100";
-									-- when "000100" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000011";
-									-- when "000011" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000010";
-									-- when "000010" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000001";
-									-- when "000001" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000000";
-									-- when "000000" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "001000"; i <= i + 1;
+									when "000111" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "000110";
+									when "000110" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000101";
+									when "000101" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000100";
+									when "000100" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000011";
+									when "000011" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000010";
+									when "000010" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000001";
+									when "000001" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000000";
+									when "000000" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "001000"; i <= i + 1;
 
-									when "000111" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "000110";
-									when "000110" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000101";
-									when "000101" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000100";
-									when "000100" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000011";
-									when "000011" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000010";
-									when "000010" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000001";
-									when "000001" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000000";
-									when "000000" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "001000"; i <= i + 1;
+									-- when "000111" =>  s_dado_enviar <= s_ram_dataout(7  downto 0 );  contador <= "000110";
+									-- when "000110" =>  s_dado_enviar <= s_ram_dataout(15 downto 8 );  contador <= "000101";
+									-- when "000101" =>  s_dado_enviar <= s_ram_dataout(23 downto 16);  contador <= "000100";
+									-- when "000100" =>  s_dado_enviar <= s_ram_dataout(31 downto 24);  contador <= "000011";
+									-- when "000011" =>  s_dado_enviar <= s_ram_dataout(39 downto 32);  contador <= "000010";
+									-- when "000010" =>  s_dado_enviar <= s_ram_dataout(47 downto 40);  contador <= "000001";
+									-- when "000001" =>  s_dado_enviar <= s_ram_dataout(55 downto 48);  contador <= "000000";
+									-- when "000000" =>  s_dado_enviar <= s_ram_dataout(63 downto 56);  contador <= "001000"; i <= i + 1;
 
 									when others  => s_dado_enviar <= "00000000";
 								end case;
