@@ -1,0 +1,10 @@
+{//VBOXSVR/Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Hardware/VHDL/Comunicacao/Interface USB CY7C67200/tb_interface_usb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\tb_interface_usb.vhd}
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity usb_interface_tb
+-- Compiling architecture sinais of usb_interface_tb
+
+} {} {}}

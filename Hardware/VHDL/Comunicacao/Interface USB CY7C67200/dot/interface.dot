@@ -1,0 +1,32 @@
+digraph usb { label="Logica USB"
+graph [rankdir="LR"
+dpi = 300];
+node [style=filled fillcolor=white fontsize=10]; // Nos padroes
+	
+
+	begin                         [shape="point" label="Início"];
+	st_reset               ;
+	st_write_address       ; 
+	st_read_address        ;
+	st_write_data          ; 
+	st_read_data           ; 
+	st_status              ; 
+	st_
+	st_
+
+
+	begin -> st_reset;
+	st_reset -> st_control_reg -> st_status_reg;
+
+
+	#st_status_reg -> st_status_reg    [label="00"];
+
+	st_status_reg -> st_status_reg 	                   [label="0x"];
+	st_status_reg -> st_data_reg_send                  [label="00"];
+	st_status_reg -> st_status_reg                     [label="01"];
+	st_status_reg -> st_data_reg_reci                  [label="10"];
+	st_status_reg -> st_data_reg_reci                  [label="11"];
+
+
+	{st_data_reg_send, st_data_reg_reci} -> st_status_reg;
+}

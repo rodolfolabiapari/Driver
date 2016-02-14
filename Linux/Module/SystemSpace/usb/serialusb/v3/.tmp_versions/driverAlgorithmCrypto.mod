@@ -1,0 +1,2 @@
+/media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v3/driverAlgorithmCrypto.ko
+/media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v3/driverAlgorithmCrypto.o

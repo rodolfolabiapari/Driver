@@ -1,0 +1,2 @@
+/media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v2/usbSerial.ko
+/media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v2/usbSerial.o

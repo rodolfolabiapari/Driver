@@ -1,0 +1,1 @@
+cmd_/media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v3/built-in.o :=  rm -f /media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v3/built-in.o; ar rcsD /media/sf_Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Linux/Module/SystemSpace/usb/serialusb/v3/built-in.o

@@ -1,0 +1,279 @@
+
+State Machine - |TDES_Project|estado
+Name estado.pronto estado.st_resultado_seleciona_bloco estado.st_resultado_envia estado.st_resultado_recebe_ram estado.st_decripta_seleciona_bloco estado.st_decripta_recebe_resultado estado.st_decripta_opera estado.st_decripta_recebe_ram estado.st_encripta_seleciona_bloco estado.st_encripta_recebe_resultado estado.st_encripta_opera estado.st_encripta_recebe_ram estado.st_carregando_texto estado.st_carregando_quantidade_blocos estado.st_opDecripta estado.st_opEncripta estado.st_menuOperacoes estado.st_retorna_texto_seleciona_bloco estado.st_retorna_texto_envia estado.st_retorna_texto_recebe_ram estado.st_inicializa_envio_texto estado.st_retornaTexto estado.st_feedbackTexto estado.st_recebeTexto estado.st_menuTexto estado.st_retornaChave estado.st_feedbackChave estado.st_recebeChave estado.st_menuChave estado.st_menuPrincipal estado.st_reset 
+estado.st_reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+estado.st_menuPrincipal 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+estado.st_menuChave 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+estado.st_recebeChave 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+estado.st_feedbackChave 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+estado.st_retornaChave 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+estado.st_menuTexto 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+estado.st_recebeTexto 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+estado.st_feedbackTexto 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+estado.st_retornaTexto 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+estado.st_inicializa_envio_texto 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+estado.st_retorna_texto_recebe_ram 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_retorna_texto_envia 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_retorna_texto_seleciona_bloco 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_menuOperacoes 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_opEncripta 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_opDecripta 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_carregando_quantidade_blocos 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_carregando_texto 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_encripta_recebe_ram 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_encripta_opera 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_encripta_recebe_resultado 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_encripta_seleciona_bloco 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_decripta_recebe_ram 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_decripta_opera 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_decripta_recebe_resultado 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_decripta_seleciona_bloco 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_resultado_recebe_ram 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_resultado_envia 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.st_resultado_seleciona_bloco 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+estado.pronto 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|estado
+Name estado.pronto estado.un_des3SalvaInformacao estado.un_des3Opera estado.un_des3Carrega estado.un_des2SalvaInformacao estado.un_des2Opera estado.un_des2Carrega estado.un_des1SalvaInformacao estado.un_des1Opera estado.un_des1Carrega estado.state_reset 
+estado.state_reset 0 0 0 0 0 0 0 0 0 0 0 
+estado.un_des1Carrega 0 0 0 0 0 0 0 0 0 1 1 
+estado.un_des1Opera 0 0 0 0 0 0 0 0 1 0 1 
+estado.un_des1SalvaInformacao 0 0 0 0 0 0 0 1 0 0 1 
+estado.un_des2Carrega 0 0 0 0 0 0 1 0 0 0 1 
+estado.un_des2Opera 0 0 0 0 0 1 0 0 0 0 1 
+estado.un_des2SalvaInformacao 0 0 0 0 1 0 0 0 0 0 1 
+estado.un_des3Carrega 0 0 0 1 0 0 0 0 0 0 1 
+estado.un_des3Opera 0 0 1 0 0 0 0 0 0 0 1 
+estado.un_des3SalvaInformacao 0 1 0 0 0 0 0 0 0 0 1 
+estado.pronto 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|processKey:mapK|state
+Name state.pronto state.pc2_g state.pc2_f state.pc2_e state.pc2_d state.pc2_c state.pc2_b state.pc2_a state.pc2_9 state.pc2_8 state.pc2_7 state.pc2_6 state.pc2_5 state.pc2_4 state.pc2_3 state.pc2_2 state.pc2_1 state.rotacaog_1 state.rotacaof_2 state.rotacaoe_2 state.rotacaod_2 state.rotacaoc_2 state.rotacaob_2 state.rotacaoa_2 state.rotacao9_1 state.rotacao8_2 state.rotacao7_2 state.rotacao6_2 state.rotacao5_2 state.rotacao4_2 state.rotacao3_2 state.rotacao2_1 state.rotacao1_1 state.pc1 
+state.pc1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.rotacao1_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.rotacao2_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.rotacao3_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.rotacao4_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.rotacao5_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.rotacao6_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.rotacao7_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.rotacao8_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.rotacao9_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.rotacaoa_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.rotacaob_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaoc_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaod_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaoe_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaof_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaog_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_a 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_b 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_c 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_d 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_e 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_f 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_g 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pronto 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|state
+Name state.pronto state.op_p_box state.op_sbox state.op_xor 
+state.op_xor 0 0 0 0 
+state.op_sbox 0 0 1 1 
+state.op_p_box 0 1 0 1 
+state.pronto 1 0 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|state
+Name state.pronto state.espera state.liberaSbox 
+state.liberaSbox 0 0 0 
+state.espera 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_un_des:decrito1|un_des:mapUN_Des|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|estado
+Name estado.pronto estado.des3SalvaInformacao estado.des3Opera estado.des3Carrega estado.des2SalvaInformacao estado.des2Opera estado.des2Carrega estado.des1SalvaInformacao estado.des1Opera estado.des1Carrega estado.state_reset 
+estado.state_reset 0 0 0 0 0 0 0 0 0 0 0 
+estado.des1Carrega 0 0 0 0 0 0 0 0 0 1 1 
+estado.des1Opera 0 0 0 0 0 0 0 0 1 0 1 
+estado.des1SalvaInformacao 0 0 0 0 0 0 0 1 0 0 1 
+estado.des2Carrega 0 0 0 0 0 0 1 0 0 0 1 
+estado.des2Opera 0 0 0 0 0 1 0 0 0 0 1 
+estado.des2SalvaInformacao 0 0 0 0 1 0 0 0 0 0 1 
+estado.des3Carrega 0 0 0 1 0 0 0 0 0 0 1 
+estado.des3Opera 0 0 1 0 0 0 0 0 0 0 1 
+estado.des3SalvaInformacao 0 1 0 0 0 0 0 0 0 0 1 
+estado.pronto 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|processKey:mapK|state
+Name state.pronto state.pc2_g state.pc2_f state.pc2_e state.pc2_d state.pc2_c state.pc2_b state.pc2_a state.pc2_9 state.pc2_8 state.pc2_7 state.pc2_6 state.pc2_5 state.pc2_4 state.pc2_3 state.pc2_2 state.pc2_1 state.rotacaog_1 state.rotacaof_2 state.rotacaoe_2 state.rotacaod_2 state.rotacaoc_2 state.rotacaob_2 state.rotacaoa_2 state.rotacao9_1 state.rotacao8_2 state.rotacao7_2 state.rotacao6_2 state.rotacao5_2 state.rotacao4_2 state.rotacao3_2 state.rotacao2_1 state.rotacao1_1 state.pc1 
+state.pc1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.rotacao1_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.rotacao2_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.rotacao3_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.rotacao4_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.rotacao5_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.rotacao6_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.rotacao7_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.rotacao8_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.rotacao9_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.rotacaoa_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.rotacaob_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaoc_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaod_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaoe_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaof_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.rotacaog_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_6 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_7 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_8 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_9 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_a 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_b 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_c 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_d 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_e 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_f 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pc2_g 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.pronto 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|state
+Name state.pronto state.op_p_box state.op_sbox state.op_xor 
+state.op_xor 0 0 0 0 
+state.op_sbox 0 0 1 1 
+state.op_p_box 0 1 0 1 
+state.pronto 1 0 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|state
+Name state.pronto state.espera state.liberaSbox 
+state.liberaSbox 0 0 0 
+state.espera 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox8:mapSbox8|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox7:mapSbox7|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox6:mapSbox6|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox5:mapSbox5|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox4:mapSbox4|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox3:mapSbox3|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox2:mapSbox2|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|t_des:crito1|des:mapDes|f:mapF|sbox:mapSbox|sbox1:mapSbox1|state
+Name state.pronto state.consultaRam state.inicia 
+state.inicia 0 0 0 
+state.consultaRam 0 1 1 
+state.pronto 1 0 1 
+
+State Machine - |TDES_Project|uart:uart1|estadoTX
+Name estadoTX.enviandoInformacao estadoTX.processandoEnvio estadoTX.esperaComandoEnviar 
+estadoTX.esperaComandoEnviar 0 0 0 
+estadoTX.processandoEnvio 0 1 1 
+estadoTX.enviandoInformacao 1 0 1 
+
+State Machine - |TDES_Project|uart:uart1|estadoRX
+Name estadoRX.informacaoRecebida estadoRX.estabilizandoInformacao estadoRX.recebendoInformacao estadoRX.semInformacao 
+estadoRX.semInformacao 0 0 0 0 
+estadoRX.recebendoInformacao 0 0 1 1 
+estadoRX.estabilizandoInformacao 0 1 0 1 
+estadoRX.informacaoRecebida 1 0 0 1 
+
+State Machine - |TDES_Project|uart:uart1|rx:rx1|estado
+Name estado.st_9 estado.st_1_8 estado.st_start estado.st_ocioso estado.st_reset 
+estado.st_reset 0 0 0 0 0 
+estado.st_ocioso 0 0 0 1 1 
+estado.st_start 0 0 1 0 1 
+estado.st_1_8 0 1 0 0 1 
+estado.st_9 1 0 0 0 1 

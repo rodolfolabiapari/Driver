@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d//VBOXSVR/Trabalhos_e_Pesquisas/Crypto/Codigos/Crypto/VHDL-Hardware/3DES
+Eusb_interface
+Z0 w1451098882
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 d//VBOXSVR/Trabalhos_e_Pesquisas/TCC/Codigos/Driver/Hardware/VHDL/Comunicacao/Interface USB CY7C67200
+Z5 8\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\interface_usb.vhd
+Z6 F\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\interface_usb.vhd
+l0
+L6
+VG7M^60z@]4B?h]BiDiXk81
+!s100 Xh:DL20d3m;RIXWoK]BPC0
+Z7 OV;C;10.3d;59
+32
+Z8 !s110 1451098374
+!i10b 1
+Z9 !s108 1451098374.015000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\interface_usb.vhd|
+Z11 !s107 \\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\interface_usb.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+Ausb_interface_behav
+R1
+R2
+R3
+Z14 DEx4 work 13 usb_interface 0 22 G7M^60z@]4B?h]BiDiXk81
+l50
+L22
+VhlkbYQcTRfCh5ZY^NXA]O0
+!s100 GkD8;6^Aaf=VmKacT?Y>21
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eusb_interface_tb
+Z15 w1450964470
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+Z17 8\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\tb_interface_usb.vhd
+Z18 F\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\tb_interface_usb.vhd
+l0
+L5
+V?cl>]a76Ze=ZYomVX<=E`0
+!s100 P=:oQffK1M@>3kDOlTPbF3
+R7
+32
+Z19 !s110 1450964479
+!i10b 1
+Z20 !s108 1450964479.480000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|\\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\tb_interface_usb.vhd|
+Z22 !s107 \\VBOXSVR\Trabalhos_e_Pesquisas\TCC\Codigos\Driver\Hardware\VHDL\Comunicacao\Interface USB CY7C67200\tb_interface_usb.vhd|
+!i113 1
+R12
+R13
+Asinais
+R16
+R2
+R3
+DEx4 work 16 usb_interface_tb 0 22 ?cl>]a76Ze=ZYomVX<=E`0
+l39
+L8
+V?1PXo[e4I7WZ[Ho0m9mlc3
+!s100 <;lARAP@6GbNU]3>EYcQY3
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13

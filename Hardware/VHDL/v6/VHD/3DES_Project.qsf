@@ -1,0 +1,156 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+# Date created = 10:18:12  January 08, 2016
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		3DES_Project_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY TDES_Project
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:18:12  JANUARY 08, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE TDES_Project.vhd
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/des/un_des.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/des/ip_finale.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/des/ip.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/des/des.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/t_un_des.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/3des/t_des.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/feistel/p_box.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/feistel/f.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/feistel/e.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/keys/processKey.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/keys/pc2.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/keys/pc1.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/ram/ramTexto.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox8.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox7.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox6.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox5.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox4.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox3.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox2.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox1.vhd"
+set_global_assignment -name VHDL_FILE "3DES VHDL/sbox/sbox.vhd"
+set_global_assignment -name VHDL_FILE Display/7seg.vhd
+set_global_assignment -name VHDL_FILE UART/Clock/newClock.vhd
+set_global_assignment -name VHDL_FILE "UART/RX TX/tx.vhd"
+set_global_assignment -name VHDL_FILE "UART/RX TX/rx.vhd"
+set_global_assignment -name VHDL_FILE UART/uart.vhd
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_M23 -to botao_0
+set_location_assignment PIN_M21 -to botao_1
+set_location_assignment PIN_N21 -to botao_2
+set_location_assignment PIN_R24 -to botao_3
+set_location_assignment PIN_G18 -to bus_displays_out[0]
+set_location_assignment PIN_F22 -to bus_displays_out[1]
+set_location_assignment PIN_E17 -to bus_displays_out[2]
+set_location_assignment PIN_L26 -to bus_displays_out[3]
+set_location_assignment PIN_L25 -to bus_displays_out[4]
+set_location_assignment PIN_J22 -to bus_displays_out[5]
+set_location_assignment PIN_H22 -to bus_displays_out[6]
+set_location_assignment PIN_M24 -to bus_displays_out[7]
+set_location_assignment PIN_Y22 -to bus_displays_out[8]
+set_location_assignment PIN_W21 -to bus_displays_out[9]
+set_location_assignment PIN_W22 -to bus_displays_out[10]
+set_location_assignment PIN_W25 -to bus_displays_out[11]
+set_location_assignment PIN_U23 -to bus_displays_out[12]
+set_location_assignment PIN_U24 -to bus_displays_out[13]
+set_location_assignment PIN_AA25 -to bus_displays_out[14]
+set_location_assignment PIN_AA26 -to bus_displays_out[15]
+set_location_assignment PIN_Y25 -to bus_displays_out[16]
+set_location_assignment PIN_W26 -to bus_displays_out[17]
+set_location_assignment PIN_Y26 -to bus_displays_out[18]
+set_location_assignment PIN_W27 -to bus_displays_out[19]
+set_location_assignment PIN_W28 -to bus_displays_out[20]
+set_location_assignment PIN_V21 -to bus_displays_out[21]
+set_location_assignment PIN_U21 -to bus_displays_out[22]
+set_location_assignment PIN_AB20 -to bus_displays_out[23]
+set_location_assignment PIN_AA21 -to bus_displays_out[24]
+set_location_assignment PIN_AD24 -to bus_displays_out[25]
+set_location_assignment PIN_AF23 -to bus_displays_out[26]
+set_location_assignment PIN_Y19 -to bus_displays_out[27]
+set_location_assignment PIN_AB19 -to bus_displays_out[28]
+set_location_assignment PIN_AA19 -to bus_displays_out[29]
+set_location_assignment PIN_AG21 -to bus_displays_out[30]
+set_location_assignment PIN_AH21 -to bus_displays_out[31]
+set_location_assignment PIN_AE19 -to bus_displays_out[32]
+set_location_assignment PIN_AF19 -to bus_displays_out[33]
+set_location_assignment PIN_AE18 -to bus_displays_out[34]
+set_location_assignment PIN_AD18 -to bus_displays_out[35]
+set_location_assignment PIN_AC18 -to bus_displays_out[36]
+set_location_assignment PIN_AB18 -to bus_displays_out[37]
+set_location_assignment PIN_AH19 -to bus_displays_out[38]
+set_location_assignment PIN_AG19 -to bus_displays_out[39]
+set_location_assignment PIN_AF18 -to bus_displays_out[40]
+set_location_assignment PIN_AH18 -to bus_displays_out[41]
+set_location_assignment PIN_AA17 -to bus_displays_out[42]
+set_location_assignment PIN_AB16 -to bus_displays_out[43]
+set_location_assignment PIN_AA16 -to bus_displays_out[44]
+set_location_assignment PIN_AB17 -to bus_displays_out[45]
+set_location_assignment PIN_AB15 -to bus_displays_out[46]
+set_location_assignment PIN_AA15 -to bus_displays_out[47]
+set_location_assignment PIN_AC17 -to bus_displays_out[48]
+set_location_assignment PIN_AD17 -to bus_displays_out[49]
+set_location_assignment PIN_AE17 -to bus_displays_out[50]
+set_location_assignment PIN_AG17 -to bus_displays_out[51]
+set_location_assignment PIN_AH17 -to bus_displays_out[52]
+set_location_assignment PIN_AF17 -to bus_displays_out[53]
+set_location_assignment PIN_AG18 -to bus_displays_out[54]
+set_location_assignment PIN_AA14 -to bus_displays_out[55]
+set_location_assignment PIN_Y2 -to clock
+set_location_assignment PIN_J17 -to led_reset
+set_location_assignment PIN_E21 -to leds_green[0]
+set_location_assignment PIN_E22 -to leds_green[1]
+set_location_assignment PIN_E25 -to leds_green[2]
+set_location_assignment PIN_E24 -to leds_green[3]
+set_location_assignment PIN_H21 -to leds_green[4]
+set_location_assignment PIN_G20 -to leds_green[5]
+set_location_assignment PIN_G22 -to leds_green[6]
+set_location_assignment PIN_G21 -to leds_green[7]
+set_location_assignment PIN_AB22 -to pin_1_in
+set_location_assignment PIN_AC21 -to pin_5_out
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

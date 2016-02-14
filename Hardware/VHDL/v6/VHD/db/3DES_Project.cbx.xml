@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="3DES_Project">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TDES_Project|ramTexto:mapram|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_qcm1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
